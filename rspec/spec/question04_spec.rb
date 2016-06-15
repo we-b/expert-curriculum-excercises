@@ -2,15 +2,15 @@ require 'question04'
 
 describe Money do
   describe '#change?' do
-    context 'less than 1000 yen' do
-      it 'returns in coins' do
+    context 'おつりが1000未満の場合' do
+      it '小銭で返すこと' do
         money = Money.new(change: 500)
         expect(money.change_in?).to eq 'coins'
       end
     end
 
-    context 'more than 1000 yen' do
-      it 'returns in bill' do
+    context 'おつりが1000以上の場合' do
+      it 'お札で返すこと' do
         money = Money.new(change: 6000)
         expect(money.change_in?).to eq 'bill'
       end
@@ -24,16 +24,16 @@ describe Money do
     let(:money) { Money.new(params) }
     let(:params) { { change: change } }
 
-    context 'less than 1000 yen' do
+    context 'おつりが1000未満の場合' do
       let(:change) { 500 }
-      it 'returns in coins' do
+      it '小銭で返すこと' do
         expect(money.change_in?).to eq 'coins'
       end
     end
 
-    context 'more than 1000 yen' do
+    context 'おつりが1000以上の場合' do
       let(:change) { 6000 }
-      it 'returns in bill' do
+      it 'お札で返すこと' do
         expect(money.change_in?).to eq 'bill'
       end
     end
