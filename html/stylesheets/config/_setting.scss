@@ -5,3 +5,6 @@
 
 // 使用するリセットCSS
 $resetCSS: 'HTML5';
+
+// IE非対応の場合 false
+$supportIE: true;

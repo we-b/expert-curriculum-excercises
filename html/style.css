@@ -100,4 +100,10 @@ input, select {
   vertical-align: middle;
 }
 
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 /*# sourceMappingURL=style.css.map */
