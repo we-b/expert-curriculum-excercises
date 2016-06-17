@@ -9,6 +9,9 @@
 // リセットCSS
 @import './reset/reset';
 
+// 変数ファイル
+@import './config/_variables.scss';
+
 // ユーティリティ
 @import './utilities/base';
 
