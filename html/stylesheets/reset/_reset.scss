@@ -1,0 +1,20 @@
+$resetCSS: 1 !default
+
+@if($resetCSS == 1 or $resetCSS == HTML5) {
+
+}
+@else if($resetCSS == 2 or $resetCSS == Eric) {
+
+}
+@else if($resetCSS == 3 or $resetCSS == YUI) {
+
+}
+@else if($resetCSS == 4 or $resetCSS == Normalize) {
+
+}
+@else if($resetCSS == 5 or $resetCSS == My) {
+
+}
+@else {
+
+}
