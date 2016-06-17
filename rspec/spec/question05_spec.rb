@@ -10,7 +10,7 @@ describe User do
     end
 
     context '名前がTaroでない場合' do
-      it '偽を返こと' do
+      it '偽を返すこと' do
         user = User.new('Jiro')
         expect(user.match_user?).to be_falsey
       end
