@@ -1,20 +1,30 @@
 $resetCSS: 1 !default
 
-@if($resetCSS == 1 or $resetCSS == HTML5) {
+// 0 = My
+// 1 = HTML5
+// 2 = Eric
+// 3 = YUI
+// 4 = Normalize
+// ohter Universal Selector
 
+@if($resetCSS == 1 or $resetCSS == HTML5) {
+  @import 'html5doctor';
 }
 @else if($resetCSS == 2 or $resetCSS == Eric) {
-
+  @import 'eric';
 }
 @else if($resetCSS == 3 or $resetCSS == YUI) {
-
+  @import 'yui3';
 }
 @else if($resetCSS == 4 or $resetCSS == Normalize) {
-
+  @import 'normalize';
 }
 @else if($resetCSS == 5 or $resetCSS == My) {
-
+  /*! My Reset CSS */
 }
 @else {
-
+  * {
+    margin: 0;
+    padding: 0;
+  }
 }
