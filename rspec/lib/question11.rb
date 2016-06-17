@@ -23,4 +23,16 @@ class Profile
     "#{@name}, #{@gender}, #{@blood_type}, #{@handedness}"
   end
 
+  def gender_blood_type
+    "#{@gender}, #{@blood_type}"
+  end
+
+  def gender_handedness
+    "#{@gender}, #{@handedness}"
+  end
+
+  def gender_blood_type_handedness
+    "#{@gender}, #{@blood_type}, #{@handedness}"
+  end
+
 end
