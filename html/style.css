@@ -1,235 +1,103 @@
-/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 /*
- * Normalization
- */
-abbr[title] {
-  text-decoration: underline;
-  text-decoration: underline dotted; }
-
-audio:not([controls]) {
-  display: none; }
-
-b,
-strong {
-  font-weight: bolder; }
-
-button {
-  -webkit-appearance: button;
-  overflow: visible; }
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-button:-moz-focusring,
-input:-moz-focusring {
-  outline: 1px dotted ButtonText; }
-
-button,
-select {
-  text-transform: none; }
-
-details {
-  display: block; }
-
-hr {
-  overflow: visible; }
-
-html {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%; }
-
-input {
-  -webkit-border-radius: 0; }
-  input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button; }
-  input[type="number"] {
-    width: auto; }
-  input[type="search"] {
-    -webkit-appearance: textfield; }
-    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-      -webkit-appearance: none; }
-
-main {
-  display: block; }
-
-pre {
-  overflow: auto; }
-
-progress {
-  display: inline-block; }
-
-summary {
-  display: block; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-template {
-  display: none; }
-
-textarea {
-  overflow: auto; }
-
-[hidden] {
-  display: none; }
-
-/*
- * Universal inheritance
- */
-*,
-::before,
-::after {
-  box-sizing: inherit; }
-
-* {
-  font-size: inherit;
-  line-height: inherit; }
-
-::before,
-::after {
-  text-decoration: inherit;
-  vertical-align: inherit; }
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-style: inherit;
-  font-weight: inherit; }
-
-/*
- * Opinionated defaults
- */
-* {
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
 
-*,
-::before,
-::after {
-  border-style: solid;
-  border-width: 0; }
+body {
+  line-height: 1;
+}
 
-a,
-area,
-button,
-input,
-label,
-select,
-textarea,
-[tabindex] {
-  touch-action: manipulation; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none; }
-  select::-ms-expand {
-    display: none; }
-  select::-ms-value {
-    color: currentColor; }
+nav ul {
+  list-style: none;
+}
 
-svg {
-  fill: currentColor; }
+blockquote, q {
+  quotes: none;
+}
 
-[aria-busy="true"] {
-  cursor: progress; }
-
-[aria-controls] {
-  cursor: pointer; }
-
-[aria-disabled] {
-  cursor: default; }
-
-[hidden][aria-hidden="false"] {
-  clip: rect(0 0 0 0);
-  display: inherit;
-  position: absolute; }
-  [hidden][aria-hidden="false"]:focus {
-    clip: auto; }
-
-/*
- * Configurable defaults
- */
-* {
-  background-repeat: no-repeat; }
-
-:root {
-  background-color: #ffffff;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: default;
-  font: 100%/1.5 sans-serif; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
 
 a {
-  text-decoration: none; }
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle; }
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
 
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  color: inherit; }
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
 
-button,
-[type="button"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="reset"],
-[type="search"],
-[type="submit"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-select,
-textarea {
-  min-height: 1.5em; }
+del {
+  text-decoration: line-through;
+}
 
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace; }
-
-nav ol,
-nav ul {
-  list-style: none; }
-
-small {
-  font-size: 75%; }
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
-textarea {
-  resize: vertical; }
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
 
-::-moz-selection {
-  background-color: #b3d4fc;
-  color: #ffffff;
-  text-shadow: none; }
-
-::selection {
-  background-color: #b3d4fc;
-  color: #ffffff;
-  text-shadow: none; }
+input, select {
+  vertical-align: middle;
+}
 
 /*# sourceMappingURL=style.css.map */
