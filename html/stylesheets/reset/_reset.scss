@@ -5,7 +5,7 @@ $resetCSS: 1 !default
 // 2 = Eric
 // 3 = YUI
 // 4 = Normalize
-// ohter Universal Selector
+// other Universal Selector
 
 @if($resetCSS == 1 or $resetCSS == HTML5) {
   @import 'html5doctor';
