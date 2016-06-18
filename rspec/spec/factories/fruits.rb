@@ -5,7 +5,7 @@ FactoryGirl.define do
     second_fruit 'orange'
     third_fruit 'pineapple'
 
-    initialize_with { new(first_fruit, second_fruit, third_fruit) }
+    initialize_with { new first_fruit, second_fruit, third_fruit }
   end
 
 end

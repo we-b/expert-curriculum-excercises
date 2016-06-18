@@ -42,7 +42,7 @@ FactoryGirl.define do
     factory :female_right,      traits: [:female, :right]
     factory :male_ab_type_left, traits: [:male, :ab_type, :left]
 
-    initialize_with { new(name, gender, blood_type, handedness) }
+    initialize_with { new name, gender, blood_type, handedness }
   end
 
 end

@@ -14,7 +14,7 @@ FactoryGirl.define do
       company { Faker::Company.name }
     end
 
-    initialize_with { new(first_name, last_name, email, company) }
+    initialize_with { new first_name, last_name, email, company }
   end
 
 end
