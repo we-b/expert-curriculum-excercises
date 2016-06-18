@@ -19,6 +19,7 @@
 RSpec.configure do |config|
   require 'support/factory_girl'
   require 'faker'
+  require 'pry-rails'
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
