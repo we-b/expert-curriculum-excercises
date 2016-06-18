@@ -1,4 +1,4 @@
-# エキスパートコースのテストカリキュラム
+# エキスパートコースのRspecカリキュラム
 
 ## ファイル構成
 
@@ -25,7 +25,6 @@ cd rspec
 gem install rspec
 rspec --init
 echo '--format documentation' >> .rspec
-
 ```
 
 ### Gemfileの作成
@@ -73,7 +72,6 @@ RSpec.configure do |config|
     FactoryGirl.find_definitions
   end
 end
-
 ```
 
 ## テストの実行
