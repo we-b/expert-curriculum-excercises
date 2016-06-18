@@ -1,5 +1,4 @@
 require 'question13'
-require 'pry'
 
 describe Run do
   describe '#distance(distance)' do
