@@ -22,7 +22,7 @@ describe Game do
     context 'statusが5の場合' do
       let(:status) { 5 }
       it '地球を支配すること' do
-        expect(game.happy_moment).to eq('あなたは地球を支配することに成功しました！おめでとうございます！')
+        expect(game.happy_moment).to eq('あなたは王国を支配することに成功しました！おめでとうございます！')
       end
     end
 
