@@ -21,8 +21,7 @@ end
 describe Money do
   describe '#change?' do
 
-    let(:money) { Money.new(params) }
-    let(:params) { { change: change } }
+    let(:money) { Money.new(change: change) }
 
     context 'おつりが1000未満の場合' do
       let(:change) { 500 }
