@@ -5,7 +5,7 @@
   text-align: center;
   font-family: HKExplorerSharp-SemiBold;
   text-decoration: none;
-  @include btn-focus();
+  @include focus-opacity(0.8);
 }
 
 .btn--black {

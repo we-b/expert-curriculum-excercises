@@ -1,0 +1,39 @@
+.footer {
+  background-color: $yellow;
+
+  &__wrapper {
+    height: 110px;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 140px;
+    color: #000;
+    @include clearfix();
+  }
+
+  &__nav {
+    float: left;
+    width: 1140px;
+  }
+
+  .nav {
+    @include clearfix();
+
+    &__item {
+      float: left;
+
+      &_link {
+        padding: 0 15px;
+        display: block;
+        @include reset_anchor();
+        @include one_line_middle(110px);
+        @include font-type(12px, #111, 'bold');
+        @include focus-color(#000, #fff);
+      }
+    }
+  }
+
+  &__copy {
+    float: right;
+    width: 300px;
+  }
+}

@@ -12,7 +12,13 @@
 @import './reset/reset';
 
 // ミックスインファイル
+@import './mixins/clearfix';
+@import './mixins/reset_modifier';
+@import './mixins/text_middle.scss';
+@import './mixins/accent';
+@import './mixins/font_type';
 @import './mixins/buttons';
 
-// モジュール
+// デザインモジュール
 @import './modules/buttons';
+@import './modules/footer';
