@@ -1,0 +1,12 @@
+@mixin btn-size($width, $height, $line-height, $font-size) {
+  width:        $width;
+  height:       $height;
+  line-height:  $line-height;
+  font-size:    $font-size;
+}
+
+@mixin btn-focus() {
+  &:hover {
+    opacity: 0.8;
+  }
+}

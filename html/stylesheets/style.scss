@@ -5,15 +5,14 @@
 
 // 設定用ファイル
 @import './config/setting';
+// 変数ファイル
+@import './config/variables';
 
 // リセットCSS
 @import './reset/reset';
 
-// 変数ファイル
-@import './config/_variables.scss';
-
-// ユーティリティ
-@import './utilities/base';
+// ミックスインファイル
+@import './mixins/buttons';
 
 // モジュール
 @import './modules/buttons';

@@ -1,43 +1,35 @@
 .btn {
   display: inline-block;
   padding: 0 20px;
-  height: 60px;
   box-sizing: border-box;
   text-align: center;
-  line-height: 60px;
   font-family: HKExplorerSharp-SemiBold;
   text-decoration: none;
-}
-
-.btn--gray {
-  width: 260px;
-  height: 65px;
-  line-height: 65px;
-  background-color: #F0F5F7;
-  color: #111;
-  font-size: 18px;
-}
-
-.btn--border {
-  width: 183px;
-  border: 3px solid #000;
-  color: #111;
-  font-size: 24px;
-}
-
-.btn--yellow {
-  width: 240px;
-  background-color: $yellow;
-  color: #111;
-  font-size: 24px;
+  @include btn-focus();
 }
 
 .btn--black {
-  width: 315px;
-  height: 70px;
+  @include btn-size($btn_black_width, $btn_black_height, $btn_black_height, 18px);
   box-shadow: -4px -4px $yellow;
-  line-height: 70px;
   background-color: #000;
   color: #FFF;
-  font-size: 18px;
 }
+
+.btn--border {
+  @include btn-size($btn_border_width, $btn_border_height, $btn_border_height, 24px);
+  border: 3px solid #000;
+  color: #111;
+}
+
+.btn--gray {
+  @include btn-size($btn_gray_width, $btn_gray_height, $btn_gray_height, 18px);
+  background-color: #F0F5F7;
+  color: #111;
+}
+
+.btn--yellow {
+  @include btn-size($btn_yellow_width, $btn_yellow_height, $btn_yellow_height, 24px);
+  background-color: $yellow;
+  color: #111;
+}
+
