@@ -1,9 +1,7 @@
 require 'question03'
 
 describe Mathematics do
-
   let(:math) { Mathematics.new }
-
   describe '#addition' do
     it '2つの値の和を返すこと' do
       expect(math.addition(2, 3)).to eq 5
