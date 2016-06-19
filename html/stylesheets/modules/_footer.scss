@@ -1,9 +1,9 @@
 .footer {
   background-color: $yellow;
+  min-width: 1440px;
 
   &__wrapper {
     height: 110px;
-    width: 1440px;
     margin: 0 auto;
     padding: 0 140px;
     color: #000;
@@ -12,7 +12,7 @@
 
   &__nav {
     float: left;
-    width: 1140px;
+    max-width: 1140px;
   }
 
   .nav {
@@ -34,7 +34,7 @@
 
   &__copy {
     float: right;
-    width: 300px;
+    max-width: 300px;
     @include one_line_middle(110px);
     @include font-type(12px, #111, 'bold');
   }
