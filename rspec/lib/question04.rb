@@ -1,6 +1,6 @@
 class Money
 
-  def initialize(change:)
+  def initialize(change)
     @change = change
   end
 
