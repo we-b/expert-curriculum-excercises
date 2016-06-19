@@ -23,68 +23,56 @@ time, mark, audio, video {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
-}
+  background: transparent; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 nav ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none;
-}
+  content: none; }
 
 a {
   margin: 0;
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
-}
+  background: transparent; }
 
 /* change colours to suit your needs */
 ins {
   background-color: #ff9;
   color: #000;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /* change colours to suit your needs */
 mark {
   background-color: #ff9;
   color: #000;
   font-style: italic;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 del {
-  text-decoration: line-through;
-}
+  text-decoration: line-through; }
 
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
-  cursor: help;
-}
+  cursor: help; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 /* change border colour to suit your needs */
 hr {
@@ -93,17 +81,53 @@ hr {
   border: 0;
   border-top: 1px solid #cccccc;
   margin: 1em 0;
-  padding: 0;
-}
+  padding: 0; }
 
 input, select {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .clearfix:after {
   content: '';
   display: block;
-  clear: both;
-}
+  clear: both; }
+
+.btn {
+  display: inline-block;
+  padding: 0 20px;
+  height: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 60px;
+  font-family: HKExplorerSharp-SemiBold;
+  text-decoration: none; }
+
+.btn--gray {
+  width: 260px;
+  height: 65px;
+  line-height: 65px;
+  background-color: #F0F5F7;
+  color: #111;
+  font-size: 18px; }
+
+.btn--border {
+  width: 183px;
+  border: 3px solid #000;
+  color: #111;
+  font-size: 24px; }
+
+.btn--yellow {
+  width: 240px;
+  background-color: #FFEC00;
+  color: #111;
+  font-size: 24px; }
+
+.btn--black {
+  width: 315px;
+  height: 70px;
+  box-shadow: -4px -4px #FFEC00;
+  line-height: 70px;
+  background-color: #000;
+  color: #FFF;
+  font-size: 18px; }
 
 /*# sourceMappingURL=style.css.map */
