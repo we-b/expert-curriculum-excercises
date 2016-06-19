@@ -1,9 +1,10 @@
 .footer {
   background-color: $yellow;
-  min-width: 1440px;
+  min-width: $layout-width;
+  @include font-type($footer-font-size, #111, 'bold');
 
   &__wrapper {
-    height: 110px;
+    height: $footer-height;
     margin: 0 auto;
     padding: 0 140px;
     color: #000;
@@ -25,8 +26,7 @@
         padding: 0 15px;
         display: block;
         @include reset_anchor();
-        @include one_line_middle(110px);
-        @include font-type(12px, #111, 'bold');
+        @include one_line_middle($footer-height);
         @include focus-color(#000, #fff);
       }
     }
@@ -35,7 +35,6 @@
   &__copy {
     float: right;
     max-width: 300px;
-    @include one_line_middle(110px);
-    @include font-type(12px, #111, 'bold');
+    @include one_line_middle($footer-height);
   }
 }
