@@ -35,5 +35,7 @@
   &__copy {
     float: right;
     width: 300px;
+    @include one_line_middle(110px);
+    @include font-type(12px, #111, 'bold');
   }
 }
