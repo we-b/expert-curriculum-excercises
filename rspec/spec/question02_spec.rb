@@ -1,7 +1,6 @@
 describe '四則演算' do
-
   describe '足し算' do
-    it '1 + 1 は 2 になること' do
+    it '3 + 5 は 8 になること' do
       expect(1 + 1).to eq 2
     end
   end
@@ -23,5 +22,4 @@ describe '四則演算' do
       expect(40 / 8).to eq 5
     end
   end
-
 end
