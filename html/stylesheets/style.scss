@@ -8,6 +8,9 @@
 // 変数ファイル
 @import './config/variables';
 
+// フォント読み込みファイル
+@import './config/fonts';
+
 // リセットCSS
 @import './reset/reset';
 
@@ -23,6 +26,7 @@
 // デザインモジュール
 @import './modules/layout';
 @import './modules/buttons';
+@import './modules/header';
 @import './modules/upper-content';
 @import './modules/bottom_content';
 @import './modules/footer';

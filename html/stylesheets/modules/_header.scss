@@ -1,0 +1,108 @@
+.header {
+  height: 928px;
+  background-color: $gray;
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+
+    &__header-img {
+      position: absolute;
+      top: 112px;
+      right: 140px;
+    }
+
+    &__title-box {
+      position: absolute;
+      top: 250px;
+      left: 150px;
+    }
+
+    &__nav {
+      background-color: #fff;
+      position: absolute;
+      bottom: -115px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 1100px;
+      height: 230px;
+    }
+  }
+}
+
+.header-img {
+
+  img {
+    height: 580px;
+    width: 910px;
+    box-shadow: -10px -10px $yellow;
+  }
+}
+
+.title-box {
+
+  &__logo {
+    padding: 10px;
+    border: 2px solid #231916;
+
+    img {
+      height: 140px;
+      width: 430px;
+    }
+  }
+
+  &__copy {
+    margin-top: 33px;
+    @include font-type(26px, #000, normal);
+    line-height: 26px * 1.8;
+  }
+}
+
+.welcome-copy {
+  position: relative;
+  top: -26px;
+  left: -26px;
+  display: inline-block;
+  @include font-type(50px, $yellow, normal);
+  font-family: "Freestyle Script Std";
+}
+
+.registration-btn {
+  float: right;
+  padding: 20px;
+  @include font-type(18px, #111, bold);
+}
+
+.header__wrapper__nav .nav {
+  padding: 40px;
+  @include clearfix;
+
+  &__left-box {
+    float: left;
+    @include font-type(30px, #111, bold);
+    line-height: 30px*1.2;
+  }
+
+  &__right-box {
+    float: right;
+    @include clearfix;
+
+    &__sub-text {
+      @include font-type(22px, #D3D3D3, bold);
+    }
+  }
+}
+
+.header .btns {
+   margin-top: 15px;
+   @include clearfix;
+
+  .btn {
+    float: left;
+  }
+
+  .btn:not(:first-child) {
+    margin-left: 30px;
+  }
+}

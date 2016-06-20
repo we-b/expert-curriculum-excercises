@@ -22,13 +22,13 @@
 }
 
 .btn--gray {
-  @include btn-size($btn_gray_width, $btn_gray_height, $btn_gray_height, 18px);
+  @include btn-size($btn_gray_width, $btn_gray_height, $btn_gray_height, 18px, bold);
   background-color: #F0F5F7;
   color: #111;
 }
 
 .btn--yellow {
-  @include btn-size($btn_yellow_width, $btn_yellow_height, $btn_yellow_height, 24px);
+  @include btn-size($btn_yellow_width, $btn_yellow_height, $btn_yellow_height, 24px, bold);
   background-color: $yellow;
   color: #111;
 }
