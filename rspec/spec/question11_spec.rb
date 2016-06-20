@@ -28,5 +28,4 @@ describe Profile do
       expect(profile.name_gender_handedness).to eq('Tech Taro, female, left')
     end
   end
-
 end
