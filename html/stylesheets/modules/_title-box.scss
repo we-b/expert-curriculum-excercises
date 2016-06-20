@@ -1,0 +1,18 @@
+.title-box {
+
+  &__logo {
+    padding: 10px;
+    border: 2px solid #231916;
+
+    img {
+      width: 30vw;
+    }
+  }
+
+  &__copy {
+    margin-top: 33px;
+    @include font-type(26px, #000, bold);
+    line-height: 26px * 1.8;
+    font-family: 'Krona One', sans-serif;
+  }
+}

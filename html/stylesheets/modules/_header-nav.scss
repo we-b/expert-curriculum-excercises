@@ -1,0 +1,47 @@
+.header__bottom {
+  .welcome-copy {
+    position: relative;
+    top: -26px;
+    left: -26px;
+    display: inline-block;
+    @include font_type(50px, $yellow, normal);
+    font-family: 'Kaushan Script', cursive;
+  }
+
+  .registration-btn {
+    float: right;
+    padding: 20px;
+    @include font-type(18px, #111, bold);
+
+    a {
+      @include reset_anchor;
+    }
+
+    img {
+      height: 20px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  .nav {
+    padding: 40px;
+    @include clearfix;
+
+    &__left-box {
+      float: left;
+      @include font_type(30px, #111, bold);
+      line-height: 30px*1.2;
+    }
+
+    &__right-box {
+      float: right;
+      @include clearfix;
+
+      &__sub-text {
+        @include font_type(22px, #D3D3D3, bold);
+      }
+    }
+  }
+}
+

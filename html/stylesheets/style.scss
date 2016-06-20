@@ -10,6 +10,8 @@
 
 // フォント読み込みファイル
 @import './config/fonts';
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://fonts.googleapis.com/css?family=Krona+One);
 
 // リセットCSS
 @import './reset/reset';
@@ -27,6 +29,9 @@
 @import './modules/layout';
 @import './modules/buttons';
 @import './modules/header';
+@import './modules/header-nav';
+@import './modules/header-img';
+@import './modules/title-box';
 @import './modules/upper-content';
 @import './modules/bottom_content';
 @import './modules/footer';

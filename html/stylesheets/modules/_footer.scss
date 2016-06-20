@@ -5,7 +5,7 @@
 
   &__wrapper {
     height: $footer-height;
-    width: 1440px;;
+    width: 100vw;
     margin: 0 auto;
     color: #000;
     @include clearfix();
@@ -13,8 +13,8 @@
 
   &__nav {
     float: left;
-    max-width: 1140px;
-    margin-left: 140px;
+    max-width: 60vw;
+    margin-left: 10vw;
   }
 
   .nav {
@@ -35,8 +35,8 @@
 
   &__copy {
     float: right;
-    max-width: 300px;
-    margin-right: 140px;
+    max-width: 20vw;
+    margin-right: 10vw;
     @include one_line_middle($footer-height);
   }
 }
