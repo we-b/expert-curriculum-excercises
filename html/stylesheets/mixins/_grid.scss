@@ -1,0 +1,11 @@
+.row {
+  @include clearfix;
+
+  .col-4 {
+    float: left;
+    width: $layout_width / 4;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+}

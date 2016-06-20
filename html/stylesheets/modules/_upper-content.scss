@@ -1,0 +1,24 @@
+.upper-content {
+
+  &__title {
+    padding-top: 80px;
+    font-size: 60px;
+    @include one_line_middle(60px);
+    text-align: center;
+    text-shadow: -4px -4px $yellow;
+  }
+
+  &__items {
+    padding-top: 80px;
+
+    img {
+      width: 340px;
+      height: 240px;
+    }
+  }
+
+  &__button {
+    padding-top: 70px;
+    text-align: center;
+  }
+}

@@ -18,9 +18,11 @@
 @import './mixins/accent';
 @import './mixins/font_type';
 @import './mixins/buttons';
+@import './mixins/grid';
 
 // デザインモジュール
 @import './modules/layout';
 @import './modules/buttons';
+@import './modules/upper-content';
 @import './modules/bottom_content';
 @import './modules/footer';
