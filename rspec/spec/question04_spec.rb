@@ -1,7 +1,7 @@
 require 'question04'
 
 describe Money do
-  describe '#change?' do
+  describe '#change_in?' do
     let(:money) { Money.new(change) }
     context 'おつりが1000未満の場合' do
       let(:change) { 500 }
