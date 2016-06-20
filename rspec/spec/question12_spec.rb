@@ -21,5 +21,4 @@ describe Profile do
       expect(profile.gender_blood_type_handedness).to eq('male, ab_type, left')
     end
   end
-
 end
