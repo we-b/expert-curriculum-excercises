@@ -1,7 +1,7 @@
 FactoryGirl.define do
 
   factory :game do
-    name { Faker::Name.name }
+    name   { Faker::Name.name }
     status { Faker::Number.between(0, 5) }
 
     trait :destiny_number_one do

@@ -1,8 +1,8 @@
 FactoryGirl.define do
 
   factory :profile do
-    name { Faker::Name.name }
-    gender 'male'
+    name       { Faker::Name.name }
+    gender     'male'
     blood_type 'a_type'
     handedness 'right'
 
