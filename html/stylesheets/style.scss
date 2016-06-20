@@ -20,5 +20,7 @@
 @import './mixins/buttons';
 
 // デザインモジュール
+@import './modules/layout';
 @import './modules/buttons';
+@import './modules/bottom_content';
 @import './modules/footer';

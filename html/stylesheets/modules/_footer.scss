@@ -1,6 +1,5 @@
 .footer {
   background-color: $yellow;
-  min-width: $layout-width;
   @include font-type($footer-font-size, #111, 'bold');
 
   &__wrapper {
