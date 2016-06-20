@@ -72,6 +72,16 @@
   float: right;
   padding: 20px;
   @include font-type(18px, #111, bold);
+
+  a {
+    @include reset_anchor;
+  }
+
+  img {
+    height: 20px;
+    position: relative;
+    top: 3px;
+  }
 }
 
 .header__wrapper__nav .nav {
