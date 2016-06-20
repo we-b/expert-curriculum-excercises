@@ -25,5 +25,4 @@ describe Mathematics do
       expect(math.division(30, 5)).to eq 6
     end
   end
-
 end
