@@ -21,12 +21,12 @@ describe Game do
   describe '#happy_moment' do
     context 'statusが5の場合' do
       let(:status) { 5 }
-      it '地球を支配すること' do
+      it '王国を支配すること' do
         expect(game.happy_moment).to eq('あなたは王国を支配することに成功しました！おめでとうございます！')
       end
     end
 
-    context 'statusが5以外の場合' do
+    context 'statusが0以上、5未満の場合' do
       let(:status) { 3 }
       it 'ランクがアップすること' do
         expect{ game.happy_moment }.to change{ game.status }.by(1)
@@ -42,7 +42,7 @@ describe Game do
       end
     end
 
-    context 'statusが0以外の場合' do
+    context 'statusが1以上、5未満の場合' do
       let(:status) { 3 }
       it 'ランクが下がること' do
         expect{ game.sad_moment }.to change{ game.status }.by(-1)
