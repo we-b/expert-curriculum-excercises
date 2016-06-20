@@ -8,12 +8,10 @@ projects/
   |-  style.css
   |-  stylesheets/
         |-  style.scss
-        |-  base/
         |-  config/
         |-  mixin/
         |-  modulels/
-        |-  layouts/
-        |-  utilities/
+        |-  reset/
         |-  vendor/
         |-  override/
 ```
@@ -24,14 +22,26 @@ index.html          | ページのhtmlを記述
 style.css           | 最終的にhtmlに読み込まれるcss
 stylesheets         | sassファイルを管理
 style.scss          | sassファイル群をまとめて読み込むルートファイル
-base                | htmlのスタイルの初期化をするsassファイル管理
-config              | サイト内で使用する値の設定ファイルを管理
+config              | サイト内で使用する変数の設定ファイルを管理
 mixin               | サイト内全体で使用するmixinを管理
 modules             | モジュールを管理
-layouts             | レイアウトに関するファイルを管理
-utilities           | ユーティリティクラスを管理
+reset               | cssのリセットファイルを管理
 vendor              | 外部ライブラリを管理
 override            | 外部ライブラリを上書きするファイルを管理
+
+## ルール
+
+### クラスの命名規則
+
+```
+[Block]__[Element]_[Modifier]
+```
+
+### 単語の結合方法
+
+```
+[word]-[word]
+```
 
 ## 参考url
 
