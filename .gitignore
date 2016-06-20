@@ -2,3 +2,5 @@
 ### Sass template
 .sass-cache/
 html/style.css.map
+html/style.css
+vendor/bundle/
