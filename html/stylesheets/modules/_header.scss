@@ -54,7 +54,7 @@
 
   &__copy {
     margin-top: 33px;
-    @include font-type(26px, #000, normal);
+    @include font-type(26px, #000, bold);
     line-height: 26px * 1.8;
   }
 }
