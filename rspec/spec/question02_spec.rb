@@ -1,7 +1,7 @@
 describe '四則演算' do
   describe '足し算' do
     it '3 + 5 は 8 になること' do
-      expect(1 + 1).to eq 2
+      expect(3 + 5).to eq 8
     end
   end
 
