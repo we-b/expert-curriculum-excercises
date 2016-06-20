@@ -1,5 +1,9 @@
 .bottom-content {
-  height: $bottom-content_height;
+  background: linear-gradient(#fff, $gray);
+
+  &__wrapper {
+    height: $bottom-content_height;
+  }
 
   &__title {
     padding-top: 190px;
