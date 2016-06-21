@@ -4,7 +4,7 @@
   @include font-type($footer-font-size, #111, 'bold');
 
   &__wrapper {
-    height: $footer-height;
+    min-height: $footer-height;
     width: 100vw;
     margin: 0 auto;
     color: #000;
@@ -35,7 +35,7 @@
 
   &__copy {
     float: right;
-    max-width: 20vw;
+    min-width: 20vw;
     margin-right: 10vw;
     @include one_line_middle($footer-height);
   }
