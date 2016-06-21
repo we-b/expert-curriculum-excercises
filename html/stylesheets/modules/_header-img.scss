@@ -1,7 +1,28 @@
-.header-img {
+.header-bg {
   position: absolute;
   top: 112px;
   right: 10vw;
-  width: 64vw;
-  box-shadow: -10px -10px $yellow;
+
+  &__box {
+    position: relative;
+
+    &__img {
+      width: 64vw;
+      box-shadow: -10px -10px $yellow;
+    }
+
+    &__arrow-left, &__arrow-right {
+      position: absolute;
+      top: 50%;
+      width: 3%;
+    }
+
+    &__arrow-left {
+      left: 40px;
+    }
+
+    &__arrow-right {
+      right: 40px;
+    }
+  }
 }
