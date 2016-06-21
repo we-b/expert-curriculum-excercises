@@ -3,8 +3,9 @@
 
   &__title {
     padding-top: 80px;
-    font-size: 60px;
     @include one_line_middle(60px);
+    @include font-type(60px, #000, bold);
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     text-shadow: -4px -4px $yellow;
   }

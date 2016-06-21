@@ -32,6 +32,7 @@
       float: left;
       @include font_type(30px, #111, bold);
       line-height: 30px*1.2;
+      font-family: 'Raleway', sans-serif;
     }
 
     &__right-box {

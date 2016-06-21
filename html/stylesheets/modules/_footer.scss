@@ -2,6 +2,7 @@
   min-width: $layout-width;
   background-color: $yellow;
   @include font-type($footer-font-size, #111, 'bold');
+  font-family: 'Raleway', sans-serif;
 
   &__wrapper {
     min-height: $footer-height;
