@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/styles/sanitize.css">
+  <link rel="stylesheet" href="./src/styles/index.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <header class="main-header">
+        <h1 class="logo">tweets</h1>
+      </header>
+      <div class="tweet-input">
+        <textarea class="tweet-input__textarea" name="tweet" id="js-tweet-body" cols="30" rows="10"></textarea>
+      </div>
+      <div id="js-tweets" class="tweets">
+        <section class="tweet" data-uuid="bb9f28d8-9028-45f4-aaef-e79dfabfee28">
+      <p class="tweet__body">
+        hello world
+      </p>
+        <input type="button" value="favorite" class="js-favorite">
+      <input type="button" value="destroy" class="js-destroy">
+    </section>
+      </div>
+      <nav class="filter">
+        <ul class="filter__items">
+          <li class="filter__item current"><a href="/#/all">すべてのツイート</a></li>
+          <li class="filter__item"><a href="/#/favorited">お気に入り</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+
+  <script id="js-tweet-template" type="text/x-handlebars-template">
+    {{#this}}
+    <section class="tweet" data-uuid={{uuid}}>
+      <p class="tweet__body">
+        {{body}}
+      </p>
+      {{#if isFavorited}}
+        <input type="button" value="unfavorite" class="js-favorite">
+      {{else}}
+        <input type="button" value="favorite" class="js-favorite">
+      {{/if}}
+      <input type="button" value="destroy" class="js-destroy">
+    </section>
+    {{/this}}
+  </script>
+  <script src="./src/scripts/vendor/jquery-3.0.0.js"></script>
+  <script src="./src/scripts/vendor/director.js"></script>
+  <script src="./src/scripts/vendor/handlebars-latest.js"></script>
+  <script src="./src/scripts/index.js"></script>
+</body>
+</html>
