@@ -37,6 +37,7 @@ Tweet.prototype.unfavorite = function() {
 var App = function() {
   this.tweets = []
   this.tweetTemplate = Handlebars.compile($('#js-tweet-template').html())
+  this.filterTemplate = Handlebars.compile($('#js-filter-template').html())
 
   this.bindEvents()
 
@@ -90,6 +91,7 @@ App.prototype.destroy = function(e) {
 App.prototype.render = function() {
   var tweets = this.getFilteredTweets()
   $('#js-tweets').html(this.tweetTemplate(tweets))
+  $('#js-filter').html(this.filterTemplate({isAll: (this.filter === 'all')}))
 };
 
 App.prototype.tweetIndexByUuid = function(uuid) {

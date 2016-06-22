@@ -24,15 +24,16 @@
       <input type="button" value="destroy" class="js-destroy">
     </section>
       </div>
-      <nav class="filter">
-        <ul class="filter__items">
-          <li class="filter__item current"><a href="/#/all">すべてのツイート</a></li>
-          <li class="filter__item"><a href="/#/favorited">お気に入り</a></li>
-        </ul>
-      </nav>
+      <nav id="js-filter" class="filter"></nav>
     </div>
   </main>
 
+  <script id="js-filter-template" type="text/x-handlebars-template">
+    <ul class="filter__items">
+      <li class="filter__item {{#if isAll}}current{{/if}}"><a href="/#/all">すべてのツイート</a></li>
+      <li class="filter__item {{#unless isAll}}current{{/unless}}"><a href="/#/favorited">お気に入り</a></li>
+    </ul>
+  </script>
 
   <script id="js-tweet-template" type="text/x-handlebars-template">
     {{#this}}
