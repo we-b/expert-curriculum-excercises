@@ -1,12 +1,12 @@
 .footer {
-  min-width: $layout-width;
+  width: $layout-width;
   background-color: $yellow;
   @include font-type($footer-font-size, #111, 'bold');
   font-family: 'Raleway', sans-serif;
 
   &__wrapper {
     min-height: $footer-height;
-    width: 100vw;
+    max-width: 1440px;
     margin: 0 auto;
     color: #000;
     @include clearfix();
@@ -14,8 +14,7 @@
 
   &__nav {
     float: left;
-    max-width: 60vw;
-    margin-left: 10vw;
+    margin-left: 10%;
   }
 
   .nav {
@@ -36,8 +35,11 @@
 
   &__copy {
     float: right;
-    min-width: 20vw;
-    margin-right: 10vw;
+    margin-right: 10%;
     @include one_line_middle($footer-height);
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
   }
 }
+
