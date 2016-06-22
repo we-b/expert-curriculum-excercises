@@ -3,10 +3,8 @@
   &__logo {
     padding: 10px;
     border: 2px solid #231916;
-
-    img {
-      width: 100%;
-    }
+    font-size: 5.2vw;
+    @include font-type(5.2vw, #000, 150);
   }
 
   &__copy {
