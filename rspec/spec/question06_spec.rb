@@ -1,10 +1,10 @@
 require 'question06'
 
-describe Name do
-  describe '#full_name' do
+describe ___ do
+  describe ___ do
     it 'フルネームでを返すこと' do
       user = Name.new('Tech', 'Taro', 'Tech-Taro@gmail.com', 'div')
-      expect(user.full_name).to eq('Tech Taro')
+      expect(___.full_name).to ___('Tech Taro')
     end
   end
 end

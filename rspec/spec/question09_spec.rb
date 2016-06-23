@@ -1,17 +1,17 @@
 require 'question06'
 
 describe Name do
-  describe '#my_email' do
+  describe '#email' do
     it 'Tech-Taro@gmail.comを返すこと' do
-      user = build(:email, email: 'Tech-Taro@gmail.com')
-      expect(user.email).to eq('Tech-Taro@gmail.com')
+      ___ = build(:email, email: 'Tech-Taro@gmail.com')
+      expect(user.email).to eq(___)
     end
   end
 
-  describe '#my_company' do
+  describe '#company' do
     it 'divを返すこと' do
-      user = build(:company, company: 'div')
-      expect(user.company).to eq('div')
+      user = build(:company, company: ___)
+      expect(___).to eq('div')
     end
   end
 end

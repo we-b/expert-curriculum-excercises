@@ -4,48 +4,48 @@ describe Game do
   describe '#challenge' do
     context 'destiny_numberが1の場合' do
       it '返り値があること' do
-        game = build(:game, :destiny_number_one)
-        expect(game).to be_truthy
+        game = build(___, :destiny_number_one)
+        expect(___).to be_truthy
       end
     end
 
-    context 'destiny_numberが0の場合' do
+    ___ 'destiny_numberが0の場合' do
       it '返り値があること' do
-        game = build(:game, :destiny_number_zero)
+        ___ = build(:game, ___)
         expect(game).to be_truthy
       end
     end
   end
 
   let(:game) { build(:game, status: status) }
-  describe '#happy_moment' do
+  describe ___ do
     context 'statusが5の場合' do
-      let(:status) { 5 }
+      let(___) { 5 }
       it '王国を支配すること' do
-        expect(game.happy_moment).to eq('あなたは王国を支配することに成功しました！おめでとうございます！')
+        expect(game.happy_moment).to ___('あなたは王国を支配することに成功しました！おめでとうございます！')
       end
     end
 
-    context 'statusが0以上、5未満の場合' do
-      let(:status) { 3 }
+    ___ 'statusが0以上、5未満の場合' do
+      ___(:status) { 3 }
       it 'ランクがアップすること' do
-        expect{ game.happy_moment }.to change{ game.status }.by(1)
+        expect{ ___.happy_moment }.to change{ game.status }.by(1)
       end
     end
   end
 
-  describe '#sad_moment' do
+  describe ___ do
     context 'statusが0の場合' do
-      let(:status) { 0 }
-      it '王国から追い出されること' do
+      let(:status) { ___ }
+      ___ '王国から追い出されること' do
         expect(game.sad_moment).to eq('あなたは王国から追い出されました...')
       end
     end
 
     context 'statusが1以上、5未満の場合' do
-      let(:status) { 3 }
+      let(___) { 3 }
       it 'ランクが下がること' do
-        expect{ game.sad_moment }.to change{ game.status }.by(-1)
+        expect{ game.sad_moment }.to ___{ game.status }.___(-1)
       end
     end
   end

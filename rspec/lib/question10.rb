@@ -1,10 +1,10 @@
-class Sort
+class ___
 
-  def initialize(numbers)
-    @numbers = numbers
+  def ___(numbers)
+    @numbers = ___
   end
 
-  def sort_numbers
+  def ___
     @numbers.sort
   end
 

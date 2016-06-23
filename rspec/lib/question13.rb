@@ -3,27 +3,27 @@ class Run
   @@total_distance = 0
   @@member_count = 0
 
-  def initialize(name)
-    @name = name
+  def ___(name)
+    @name = ___
     @distance = 0
-    @@member_count += 1
+    @@member_count ___ 1
   end
 
-  def distance(distance)
+  def ___(___)
     @distance += distance
     @@total_distance += distance
-    "#{@name}さんは #{@distance} km 走りました。"
+    "___さんは ___ km 走りました。"
   end
 
   def self.count
-    @@member_count
+    ___
   end
 
   def self.total_distance
-    @@total_distance
+    ___
   end
 
-  def self.result
+  def ___
     "#{count}人で、合計#{total_distance} km 走りました。"
   end
 

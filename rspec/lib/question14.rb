@@ -19,7 +19,7 @@ class Game
     if @status == 5
       'あなたは王国を支配することに成功しました！おめでとうございます！'
     else
-      "ランクアップした！"
+      'ランクアップした！'
       @status += 1
     end
   end
@@ -28,7 +28,7 @@ class Game
     if @status == 0
       'あなたは王国から追い出されました...'
     else
-      "ランクダウンした..."
+      'ランクダウンした...'
       @status -= 1
     end
   end
