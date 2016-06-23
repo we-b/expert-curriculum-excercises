@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'LigatureSymbols';
+  src: url('../fonts/LigatureSymbols-2.11.eot');
+  src: url('../fonts/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/LigatureSymbols-2.11.woff') format('woff'),
+       url('../fonts/LigatureSymbols-2.11.ttf') format('truetype'),
+       url('../fonts/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+  src: url('../fonts/LigatureSymbols-2.11.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.lsf, .lsf-icon:before {
+  -webkit-text-rendering: optimizeLegibility;
+     -moz-text-rendering: optimizeLegibility;
+      -ms-text-rendering: optimizeLegibility;
+       -o-text-rendering: optimizeLegibility;
+          text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+          font-family: 'LigatureSymbols';
+}
+
+.lsf-icon:before {
+  content:attr(title);
+  margin-right:0.3em;
+  font-size:130%;
+}
+
 html, body {
   height: 100%;
 }
@@ -25,7 +57,7 @@ main {
   -webkit-box-flex: 0;
           display: block;
           flex: none;
-          max-width: 50%;
+          max-width: 40%;
           min-width: 40%;
           background-color: hsla(31,15%,50%,.1);
           color: #242424;
@@ -63,6 +95,7 @@ main {
 
 .filter__item a {
   text-decoration: none;
+  display: block;
 }
 
 .filter__item a:visited {
@@ -79,6 +112,7 @@ main {
   background-color: #FFF;
   height: 50px;
   outline: none;
+  padding: 5px;
 }
 
 .tweet-input__submit {
@@ -97,7 +131,7 @@ main {
 }
 
 .logo {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   margin: 0;
 }
@@ -108,12 +142,44 @@ main {
   margin: 0px;
   background-color: hsla(31,15%,50%,.1);
   padding: 5px 10px;
+  overflow: scroll;
 }
 
 .tweet {
   background-color: #FFF;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.profile {
+
+}
+
+.user {
+  font-size: 0.7rem;
+}
+
+.user .user-icon {
+  margin-right: 5px;
+}
+
+.user-icon {
+  font-size: 1rem;
+}
+
+.tweet__body {
+  font-size: 1.2rem;
 }
 
 .tweet p {
   margin: 0;
+}
+
+.tweet a {
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.favorite:before {
+  color: #B6AF00;
 }

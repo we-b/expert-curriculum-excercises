@@ -72,6 +72,7 @@ App.prototype.tweet = function(e) {
 };
 
 App.prototype.favorite = function(e) {
+  e.preventDefault()
   var uuid = $(e.currentTarget).closest('section').data('uuid')
   var tweet = this.tweets[this.tweetIndexByUuid(uuid)]
   if(tweet.isFavorited) {
@@ -83,6 +84,7 @@ App.prototype.favorite = function(e) {
 };
 
 App.prototype.destroy = function(e) {
+  e.preventDefault()
   var uuid = $(e.currentTarget).closest('section').data('uuid')
   this.tweets.splice(this.tweetIndexByUuid(uuid), 1)
   this.render()
