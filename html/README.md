@@ -1,5 +1,11 @@
 # エキスパートコースのhtml/cssカリキュラムに使用する題材
 
+## コンパイルコマンド
+
+```
+$ sass --watch html/stylesheets/style.scss:html/style.css
+```
+
 ## ファイル構成
 
 ```
