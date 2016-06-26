@@ -19,6 +19,7 @@
 
   .nav {
     @include clearfix();
+    list-style: none;
 
     &__item {
       float: left;
