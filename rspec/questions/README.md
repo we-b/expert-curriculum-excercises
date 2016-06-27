@@ -73,13 +73,10 @@ $ bundle exec rspec spec/question01_spec.rb
 <h2 id="references">5. 参考サイト</h2>
 問題を解いていく上で、以下のサイトが参考になるので、分からない箇所があれば参考にしてみましょう。
 
-[使えるRSpec入門・その1「RSpecの基本的な構文や便利な機能を理解する」](http://qiita.com/jnchito/items/42193d066bd61c740612)
-
-[使えるRSpec入門・その2「使用頻度の高いマッチャを使いこなす」](http://qiita.com/jnchito/items/2e79a1abe7cd8214caa5)
-
-[RSpecにおけるFactoryGirlの使い方まとめ](http://qiita.com/muran001/items/436fd07eba1db18ed622)
-
-[Faker](http://www.rubydoc.info/github/stympy/faker/master/frames)
+ *  [使えるRSpec入門・その1「RSpecの基本的な構文や便利な機能を理解する」](http://qiita.com/jnchito/items/42193d066bd61c740612)
+ *  [使えるRSpec入門・その2「使用頻度の高いマッチャを使いこなす」](http://qiita.com/jnchito/items/2e79a1abe7cd8214caa5)
+ *  [RSpecにおけるFactoryGirlの使い方まとめ](http://qiita.com/muran001/items/436fd07eba1db18ed622)
+ *  [Faker](http://www.rubydoc.info/github/stympy/faker/master/frames)
 
 
 <h2 id="terminal">6. テストが通るときのターミナル上での表示</h2>
