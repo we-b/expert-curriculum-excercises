@@ -383,7 +383,7 @@ Review
 ### question07_spec.rb
 この問題では、テストコードを書く上で非常に重要な`factory_girl`の最も基本的な使い方を理解することがポイントになります。
 
-今回使う`factory`ファイルは`factories/names.rb`になります。`factory`ファイルは、作成したインスタンスの複数形のファイル名で作成します。`factory`ファイルに
+今回使う`factory`ファイルは`factories/names.rb`になります。`factory`ファイルは、生成したインスタンスの複数形のファイル名で作成します。`factory`ファイルに
 
     FactoryGirl.define do
     
@@ -400,7 +400,7 @@ Review
 
 と記述してあります。ここでは、インスタンスのそれぞれの属性に、属性値を与えています。`initialize_with`は、インスタンス生成時に与える属性を定義する箇所になります。上記のように`factory`ファイルを作成することで、`question06_spec.rb`で記述した`user = Name.new('Tech', 'Taro', 'Tech-Taro@gmail.com', 'div')`を、`user = build(:name)`とするだけで記述することが可能です。
 
-### lib/question08.rb
+### question08_spec.rb
 この問題では、引き続き`factory_girl`の基本的な使い方と、`be_instance_of`マッチャと`include`マッチャを理解することがポイントになります。
 
 `my_fruits`メソッドの返り値は、`@my_fruits`という配列になっています。`be_instance_of`マッチャは、返り値の型を検証することが可能です。引数に配列クラスである`Array`と記述することで、返り値が配列であるかを検証しています。
@@ -433,12 +433,12 @@ Review
   
 上記の子ファクトリ`factory :email do`と`factory :company do`は、親ファクトリである`factory :name do`にネストされた形で定義されています。これをファクトリの継承と言い、子ファクトリは、親ファクトリとの差分のみを再定義することが可能です。よって、`user = build(:email)`と記述することで、親ファクトリで与えた`email = 'Tech-Taro@gmail.com'`という属性は、`email = { Faker::Internet.free_email }`という属性に変わります。
 
-Fakerは、ダミーデータを作成することができるGemになります。中括弧で囲う必要があることに注意しましょう。Fakerはダミーデータとして様々なものを作成することができるので、何らかの属性を与える時は、適切なFakerがないか確認してみましょう。
+Fakerは、ダミーデータを生成することができるGemになります。中括弧で囲う必要があることに注意しましょう。Fakerはダミーデータとして様々なものを生成することができるので、何らかの属性を与える時は、適切なFakerがないか確認してみましょう。
 
-スペックファイルには、`user = build(:email, email: 'Tech-Taro@gmail.com')`という記述があります。これは、`email ファクトリ`で作成されたインスタンスのemail属性に、`Tech-Taro@gmail.com`という値を上書きしています。ファクトリはあくまでダミーデータなので、実際にメソッドをテストをする際には、上記のように値を上書きして使います。
+スペックファイルには、`user = build(:email, email: 'Tech-Taro@gmail.com')`という記述があります。これは、`email ファクトリ`で生成されたインスタンスのemail属性に、`Tech-Taro@gmail.com`という値を上書きしています。ファクトリはあくまでダミーデータなので、実際にメソッドをテストをする際には、上記のように値を上書きして使います。
 
 
-### lib/question10.rb
+### question10_spec.rb
 この問題では、`match`マッチャを理解することがポイントになります。
 
 `sort_numbers`メソッドは、配列の要素を昇順にソートしています。配列に対して`match`マッチャを使用すると、配列の要素数と、順番が正しいかを検証することが可能です。
@@ -501,13 +501,42 @@ Fakerは、ダミーデータを作成することができるGemになります
 
 子ファクトリを使う際に、複数の属性をグループ化して使いたい際は、このような記述をしてみましょう。
 
-### lib/question13.rb
-この問題では、`factory_girl`の応用的な使い方であるコールバックと、スペックファイルにおいて複数のインスタンスを作成する方法を理解することがポイントになります。
+### question13_spec.rb
+この問題では、`factory_girl`の応用的な使い方であるコールバックと、スペックファイルにおいて複数のインスタンスを生成する方法を理解することがポイントになります。
 
+    run = build_list(:with_four_people, 5)
 
+スペックファイル内では、上記の`build_list`というメソッドを使用し、さらにファクトリ名の後に`5`と記述することにとによって、`with_five_people`というファクトリに基づいた5つのインスタンスを生成することが可能です。一度に複数のインスタンスを生成したい際に便利なので、是非使い方を覚えておきましょう。
+
+    FactoryGirl.define do
+    
+      factory :run do
+        name { Faker::Name.name }
+    
+        factory :with_four_people do
+          after(:build) { |bicycle| bicycle.distance(6) }
+        end
+    
+        initialize_with { new name }
+      end
+    
+    end
+
+上記のファクトリファイル内では、`after (:build)`という`コールバック`と呼ばれるものを使用しています。コールバックとは、何らかの処理をする前後で、特定の処理をする際に使うものです。例えば親インスタンス生成後に、それに紐付ける形で子インスタンスを生成したいときなどに使用します。
+
+今回は、`run`ファクトリを継承する形で`with_five_people`ファクトリに基づくインスタンスを生成した直後に、それぞれのインスタンスを`bicycle`という名前で扱い、`distance()`メソッドを適用しています。よってスペックファイルでは以下のように、`build_list(:with_five_people, 5)`と記述するだけで、ファクトリファイル内でそれぞれのインスタンスに対して`distance(distance)`メソッドが適用され、`Run.count`と記述するだけで生成されたインスタンスの数が返って来ます。
+
+    it '走った人数を返すこと' do
+      build_list(:with_four_people, 5)
+      expect(Run.count).to eq(5)
+    end
 
 ### question14_spec.rb
-この問題では、テストにおける最も重要なエクスペくテーションを理解することがポイントになります。
+この問題では、`change{ hoge }.by(fuga)`というマッチャを理解することがポイントとなります。また、今までに学習した内容が多く含まれているので、良い復習になったのではないでしょうか。
+
+今回のテスト対象になるファイルでは、`happy_moment`メソッド内はで`@status`が`5`でなければ`@status`の値が一つ増えて, `sad_moment`メソッド内はで`@status`が`0`でなければ`@status`の値が一つ減るようになっています。即ちメソッドを実行すると、`@status`の値が増減します。このようなメソッドの振る舞いをテストするマッチャが`change{ hoge }.by(fuga)`というマッチャです。
+
+`expect{ X }.to change{ Y }.by(A)`の意味を訳すと、`XをするとYがAだけ変化する`という意味になります。なので、例えば今回実際に使っている`expect{ game.happy_moment }.to change{ game.status }.by(1)`という記述考えると、`game`インスタンスに対して`happy_moment`メソッドを使うと、`game`インスタンスの`@status`属性値が`1`増えるという意味になります。
 
 ### question15_spec.rb
-この問題では、テストにおける最も重要なエクスペくテーションを理解することがポイントになります。
+この問題では、特に新しい内容はありません。今までに学習したことを復習しつつ解くことができれば、しっかりとテストの基礎・応用を理解したと言えるでしょう！
