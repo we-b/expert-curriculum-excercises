@@ -4,7 +4,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
     var mentor;
 
     beforeEach(function () {
-       mentor = {  mentor1: "Abe", mentor2: "Shinbo" };
+       mentor = { mentor1: "Abe", mentor2: "Shinbo" };
     });
 
     it("20: 「プロパティの呼び出し」", function () {
