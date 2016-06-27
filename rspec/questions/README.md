@@ -31,7 +31,6 @@ questions/
 
 <h2 id="configuration">2. ファイル設定</h2>
 
-### rspecの導入・設定
 まず[【こちら】](https://github.com/we-b/expert-curriculum-excercises/tree/rspec)から、ジップ形式でダウンロードしましょう。
 ```
 $ cd expert-curriculum-excercises-rspec/rspec/questions
