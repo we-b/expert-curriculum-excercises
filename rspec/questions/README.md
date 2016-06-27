@@ -431,7 +431,7 @@ Review
     
     end
   
-上記の子ファクトリ`factory :email do`と`factory :company do`は、親ファクトリである`factory :name do`にネストされた形で定義されています。これをファクトリの継承と言い、子ファクトリは、親ファクトリとの差分のみを再定義することが可能です。よって、`user = build(:email)`と定義することで、親ファクトリで与えた`email = 'Tech-Taro@gmail.com'`という属性は、`email = { Faker::Internet.free_email }`という属性に変わります。
+上記の子ファクトリ`factory :email do`と`factory :company do`は、親ファクトリである`factory :name do`にネストされた形で定義されています。これをファクトリの継承と言い、子ファクトリは、親ファクトリとの差分のみを再定義することが可能です。よって、`user = build(:email)`と記述することで、親ファクトリで与えた`email = 'Tech-Taro@gmail.com'`という属性は、`email = { Faker::Internet.free_email }`という属性に変わります。
 
 Fakerは、ダミーデータを作成することができるGemになります。中括弧で囲う必要があることに注意しましょう。Fakerはダミーデータとして様々なものを作成することができるので、何らかの属性を与える時は、適切なFakerがないか確認してみましょう。
 
@@ -444,13 +444,67 @@ Fakerは、ダミーデータを作成することができるGemになります
 `sort_numbers`メソッドは、配列の要素を昇順にソートしています。配列に対して`match`マッチャを使用すると、配列の要素数と、順番が正しいかを検証することが可能です。
 
 ### question11_spec.rb
-この問題では、テストにおける最も重要なエクスペくテーションを理解することがポイントになります。
+この問題では、`factory_girl`の応用的な使い方で、属性をグループ化して使い分けることができる`trait`を理解することがポイントになります。
+
+    FactoryGirl.define do
+    
+      factory :profile do
+        name       { Faker::Name.name }
+        gender     'male'
+        blood_type 'a_type'
+        handedness 'right'
+    
+        trait :female do
+          gender :female
+        end
+        
+        initialize_with { new name, gender, blood_type, handedness }
+      end
+      
+    end
+
+上記の記述を例に見てみましょう。`profile`という親ファクトリに対して、`trait :female do`という形でネストされています。これは`female`のグループで、`gender`という属性に対して`female`という属性値を与えています。
+
+スペックファイルでは、`profile =  build(:profile, :female)`という形で、親ファクトリである`profile`に続けて`trait`で設定した名前を記述することにより、属性が上書きされます。具体的には、`profile`ファクトリを使用する際にセットされた`male`という`gender`の属性値に、`female`という値を上書きしています。
+
+特定の属性をグループ化できる場合は、積極的に使っていきましょう。
 
 ### question12_spec.rb
-この問題では、テストにおける最も重要なエクスペくテーションを理解することがポイントになります。
+この問題では、`factory_girl`の応用的な使い方で、子ファクトリと`traits`を組み合わせた属性の上書きを理解することがポイントになります。
+
+    FactoryGirl.define do
+    
+      factory :profile do
+        name       { Faker::Name.name }
+        gender     'male'
+        blood_type 'a_type'
+        handedness 'right'
+    
+        trait :female do
+          gender :female
+        end
+  
+        trait :right do
+          handedness :right
+        end
+  
+        factory :female_right, traits: [:female, :right]
+  
+        initialize_with { new name, gender, blood_type, handedness }
+      end
+      
+    end
+
+上記の記述を例に見てみましょう。`profile`という親ファクトリに対してネストされた形で`factory :female_right`という子ファクトリが記述されています。これは、`question09_spec.rb`で学習した、親ファクトリの属性を上書きするものです。ただし、違いとしては`factory :female_right, traits: [:female, :right]`という形で`traits`も使われています。`trait`ではなく、`traits`と書くことに注意して下さい。このようにすることで、`female`と`right`グループが動き、それぞれの`trait`で設定した属性値を上書きしています。
+
+スペックファイルでは、`question09_spec.rb`で学習したときと同様に、`profile =  build(:female_right)`という形で、子ファクトリの名前を記述します。
+
+子ファクトリを使う際に、複数の属性をグループ化して使いたい際は、このような記述をしてみましょう。
 
 ### lib/question13.rb
-この問題では、テストにおける最も重要なエクスペくテーションを理解することがポイントになります。
+この問題では、`factory_girl`の応用的な使い方であるコールバックと、スペックファイルにおいて複数のインスタンスを作成する方法を理解することがポイントになります。
+
+
 
 ### question14_spec.rb
 この問題では、テストにおける最も重要なエクスペくテーションを理解することがポイントになります。
