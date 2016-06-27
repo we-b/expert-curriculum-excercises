@@ -32,70 +32,20 @@ questions/
 
 ### rspecの導入・設定
 ```
-$ cd questions
-$ gem install rspec
-$ rspec --init
-$ echo '--format documentation' >> .rspec
-```
-
-### Gemfileの作成
-```
-$ cd questions
-$ touch Gemfile
-```
-
-### Gemの導入
-```
-#Gemfileに以下を追加して、bundle installを実行
-
-source 'https://rubygems.org'
-
-gem 'rspec'
-gem 'factory_girl'
-gem 'faker'
-gem 'pry-rails'
-```
-
-### spec_helper.rbの編集
-```
-#以下を追加
-
-require 'support/factory_girl'
-require 'faker'
-require 'pry-rails'
-```
-### factory_girl.rbの作成
-```
-$ cd questions/spec
-$ mkdir support
-$ cd support
-$ touch factory_girl.rb
-```
-
-### factory_girl.rbの編集
-```
-#以下の設定を追加
-
-RSpec.configure do |config|
-  require 'factory_girl'
-  config.include FactoryGirl::Syntax::Methods
-
-  config.before(:suite) do
-    FactoryGirl.find_definitions
-  end
-end
+ジップ形式でダウンロードする
+$ cd expert-curriculum-excercises-rspec/rspec/questions
+$ bundle install
 ```
 
 <h2 id="run_test">3. テストの実行</h2>
 
 ```
-$ cd questions
 $ bundle exec rspec ファイル名
 ```
 
 <h2 id="how_to_answer">4. 進め方</h2>
 スペックファイル（questions/spec以下のファイル）と、テスト対象のファイル（questions/lib以下のファイル）を穴埋め形式で解いていきます。
-全部で15のファイルを編集していきます。順番は、以下の通りです。
+全部で以下の15のファイルを編集していきます。順番は、以下の通りです。
   1. spec/question01_spec.rb
   2. spec/question02_spec.rb
   3. spec/question03_spec.rb
@@ -115,7 +65,6 @@ $ bundle exec rspec ファイル名
 各単体のファイルを実行していき、テストが無事に通ったら次に進みましょう！
 ファイルの実行例：
 ```
-$ cd questions
 $ bundle exec rspec spec/question01_spec.rb
 ```
 
