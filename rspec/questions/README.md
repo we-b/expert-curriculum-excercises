@@ -220,7 +220,7 @@ Fruit
     返り値が配列であること
     返り値にりんごを含むこと
 
-1 example, 0 failures
+2 example, 0 failures
 ```
 
 ### question09_spec.rb
