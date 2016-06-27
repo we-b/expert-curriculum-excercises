@@ -5,7 +5,8 @@
   2. [ファイル設定](#configuration)
   3. [テストの実行](#run_test)
   4. [進め方](#how_to_answer)
-  5. [テストが通るときのターミナル上での表示](#terminal)
+  5. [参考サイト](#references)
+  6. [テストが通るときのターミナル上での表示](#terminal)
 
 <h2 id="file_formation">1. ファイル構成</h2>
 
@@ -68,7 +69,17 @@ $ bundle exec rspec ファイル名
 $ bundle exec rspec spec/question01_spec.rb
 ```
 
-<h2 id="terminal">5. テストが通るときのターミナル上での表示</h2>
+テストが通らない際は、binding.pryを使用して、デバッグを行いましょう。
+
+<h2 id="references">5. 参考サイト</h2>
+問題を解いていく上で、以下のサイトが参考になるので、分からない箇所があれば参考にしてみましょう。
+
+![使えるRSpec入門・その1「RSpecの基本的な構文や便利な機能を理解する」](http://qiita.com/jnchito/items/42193d066bd61c740612)
+![使えるRSpec入門・その2「使用頻度の高いマッチャを使いこなす」](http://qiita.com/jnchito/items/2e79a1abe7cd8214caa5)
+![RSpecにおけるFactoryGirlの使い方まとめ](http://qiita.com/muran001/items/436fd07eba1db18ed622)
+![Faker](http://www.rubydoc.info/github/stympy/faker/master/frames)
+
+<h2 id="terminal">6. テストが通るときのターミナル上での表示</h2>
 
 ### question01_spec.rb
 ```
