@@ -13,15 +13,19 @@
 questions/
   |- spec/
        |- factories/
+             |- factory files
        |- support/
+             |- factory_girl.rb
        |- spec_helper.rb
        |- question01_spec.rb ~ question15_spec.rb
   |- lib/
        |- question03.rb ~ question15.rb
   |- .bundle/
        |- config
+  |- .rspec
   |- Gemfile
   |- Gemfile.lock
+  |- README.md
 ```
 
 <h2 id="configuration">2. ファイル設定</h2>
