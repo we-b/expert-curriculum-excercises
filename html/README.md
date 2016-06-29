@@ -3,7 +3,7 @@
 ## コンパイルコマンド
 
 ```
-$ sass --watch html/stylesheets/style.scss:html/style.css
+$ sass --watch ./stylesheets/style.scss:style.css
 ```
 
 ## ファイル構成
