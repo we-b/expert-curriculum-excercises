@@ -5,7 +5,8 @@
   2. [ファイル設定](#configuration)
   3. [テストの実行](#run_test)
   4. [進め方](#how_to_answer)
-  5. [テストが通るときのターミナル上での表示](#terminal)
+  5. [参考サイト](#references)
+  6. [テストが通るときのターミナル上での表示](#terminal)
 
 <h2 id="file_formation">1. ファイル構成</h2>
 
@@ -30,72 +31,21 @@ questions/
 
 <h2 id="configuration">2. ファイル設定</h2>
 
-### rspecの導入・設定
+まず[【こちら】](https://github.com/we-b/expert-curriculum-excercises/tree/rspec)から、Zip形式でダウンロードしましょう。
 ```
-$ cd questions
-$ gem install rspec
-$ rspec --init
-$ echo '--format documentation' >> .rspec
-```
-
-### Gemfileの作成
-```
-$ cd questions
-$ touch Gemfile
-```
-
-### Gemの導入
-```
-#Gemfileに以下を追加して、bundle installを実行
-
-source 'https://rubygems.org'
-
-gem 'rspec'
-gem 'factory_girl'
-gem 'faker'
-gem 'pry-rails'
-```
-
-### spec_helper.rbの編集
-```
-#以下を追加
-
-require 'support/factory_girl'
-require 'faker'
-require 'pry-rails'
-```
-### factory_girl.rbの作成
-```
-$ cd questions/spec
-$ mkdir support
-$ cd support
-$ touch factory_girl.rb
-```
-
-### factory_girl.rbの編集
-```
-#以下の設定を追加
-
-RSpec.configure do |config|
-  require 'factory_girl'
-  config.include FactoryGirl::Syntax::Methods
-
-  config.before(:suite) do
-    FactoryGirl.find_definitions
-  end
-end
+$ cd expert-curriculum-excercises-rspec/rspec/questions
+$ bundle install
 ```
 
 <h2 id="run_test">3. テストの実行</h2>
 
 ```
-$ cd questions
 $ bundle exec rspec ファイル名
 ```
 
 <h2 id="how_to_answer">4. 進め方</h2>
 スペックファイル（questions/spec以下のファイル）と、テスト対象のファイル（questions/lib以下のファイル）を穴埋め形式で解いていきます。
-全部で15のファイルを編集していきます。順番は、以下の通りです。
+全部で以下の15のファイルを編集していきます。順番は、以下の通りです。
   1. spec/question01_spec.rb
   2. spec/question02_spec.rb
   3. spec/question03_spec.rb
@@ -115,11 +65,21 @@ $ bundle exec rspec ファイル名
 各単体のファイルを実行していき、テストが無事に通ったら次に進みましょう！
 ファイルの実行例：
 ```
-$ cd questions
 $ bundle exec rspec spec/question01_spec.rb
 ```
 
-<h2 id="terminal">5. テストが通るときのターミナル上での表示</h2>
+テストが通らない際は、binding.pryを使用して、デバッグを行いましょう。
+
+<h2 id="references">5. 参考サイト</h2>
+問題を解いていく上で、以下のサイトが参考になるので、分からない箇所があれば参考にしてみましょう。
+
+ *  [使えるRSpec入門・その1「RSpecの基本的な構文や便利な機能を理解する」](http://qiita.com/jnchito/items/42193d066bd61c740612)
+ *  [使えるRSpec入門・その2「使用頻度の高いマッチャを使いこなす」](http://qiita.com/jnchito/items/2e79a1abe7cd8214caa5)
+ *  [RSpecにおけるFactoryGirlの使い方まとめ](http://qiita.com/muran001/items/436fd07eba1db18ed622)
+ *  [Faker](http://www.rubydoc.info/github/stympy/faker/master/frames)
+
+
+<h2 id="terminal">6. テストが通るときのターミナル上での表示</h2>
 
 ### question01_spec.rb
 ```
