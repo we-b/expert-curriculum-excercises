@@ -4,7 +4,7 @@ FactoryGirl.define do
     name { Faker::Name.name }
 
     factory :with_five_people do
-      after :build { |bicycle| bicycle.distance(6) }
+      after(:build) { |bicycle| bicycle.distance(6) }
     end
 
     initialize_with { new name }
