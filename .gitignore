@@ -3,6 +3,6 @@
 .sass-cache/
 html/style.css.map
 html/style.css
-vendor/bundle/
+html/vendor/bundle/
 .bundle/
 .DS_Store
