@@ -1,0 +1,9 @@
+.row {
+  @include clearfix;
+
+  .col-4 {
+    float: left;
+    width: 23%;
+    margin: 0 1% 16px;
+  }
+}

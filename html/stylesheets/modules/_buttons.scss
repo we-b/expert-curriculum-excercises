@@ -1,0 +1,36 @@
+.btn {
+  display: inline-block;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: HKExplorerSharp-SemiBold;
+  text-decoration: none;
+  @include focus-opacity(0.8);
+}
+
+.btn--black {
+  @include btn-size($btn_black_p-size, $btn_black_height, $btn_black_height, 0.9vw);
+  box-shadow: -4px -4px $yellow;
+  background-color: #000;
+  color: #FFF;
+}
+
+.btn--border {
+  @include btn-size($btn_border_p-size, $btn_border_height, $btn_border_height, 1.3vw, bold);
+  border: 3px solid #000;
+  color: #111;
+}
+
+.btn--gray {
+  @include btn-size($btn_gray_p-size, $btn_gray_height, $btn_gray_height, 0.9vw, bold);
+  background-color: #F0F5F7;
+  color: #111;
+}
+
+.btn--yellow {
+  @include btn-size($btn_yellow_p-size, $btn_yellow_height, $btn_yellow_height, 1.3vw, bold);
+  background-color: $yellow;
+  color: #111;
+  font-family: 'Raleway', sans-serif;
+}
+

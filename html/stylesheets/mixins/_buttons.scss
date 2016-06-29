@@ -1,0 +1,7 @@
+@mixin btn-size($p-size, $height, $line-height, $font-size, $weight:nomal) {
+  padding:      0 $p-size;
+  height:       $height;
+  line-height:  $line-height;
+  font-size:    $font-size;
+  font-weight:  $weight;
+}
