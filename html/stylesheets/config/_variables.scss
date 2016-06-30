@@ -7,21 +7,19 @@ $primaryBlack: #000;
 $primaryWhite: #fff;
 
 // ボタンサイズ
-$btn_black_p-size:   2.8vw;
 $btn_black_height:  4.8vw;
-
-$btn_border_p-size:  2.0vw;
 $btn_border_height: 4.1vw;
-
-$btn_gray_p-size:    7vw;
 $btn_gray_height:   4.5vw;
-
-$btn_yellow_p-size:  2.0vw;
 $btn_yellow_height: 4.1vw;
 
 // フォントサイズ
 // デフォルト
 $fontSize: 16;
+// ボタンフォントサイズ
+$fsBtnBlack:   18;
+$fsBtnBorder:  20;
+$fsBtnGray:    18;
+$fsBtnYellow:  24;
 // その他: プレフィックスfsをつける
 $fsWelcomeCopy: 65;
 $fsTitleBoxLogo: 65;
