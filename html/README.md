@@ -40,13 +40,21 @@ override            | 外部ライブラリを上書きするファイルを管�
 ### クラスの命名規則
 
 ```
-[Block]__[Element]_[Modifier]
+[Block]__[Element]--[Modifier]
 ```
 
-### 単語の結合方法
+### クラス名の単語の結合方法
 
 ```
 [word]-[word]
+```
+
+### mixinの命名規則
+
+単語間のつなぎはアンダースコアで行う
+
+```
+[word]_[word]
 ```
 
 ## 参考url
