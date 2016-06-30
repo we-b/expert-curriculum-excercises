@@ -19,8 +19,21 @@ $btn_gray_height:   4.5vw;
 $btn_yellow_p-size:  2.0vw;
 $btn_yellow_height: 4.1vw;
 
-// デフォルトフォントサイズ
-$fontSize: 12px;
+// フォントサイズ
+// デフォルト
+$fontSize: 16;
+// その他: プレフィックスfsをつける
+$fsWelcomeCopy: 65;
+$fsTitleBoxLogo: 65;
+$fsTitleBoxCopy: 26;
+$fsHeaderBottomLeft: 30;
+$fsHeaderBottomRightSub: 20;
+$fsUpperContentTitle: 60;
+$fsThumbTitle: 16;
+$fsThumbBody: 16;
+$fsBottomContent: 50;
+$fsRegistration: 18;
+$fsFooter: 12;
 
 // レイアウト
 $layout_width: 100%;
@@ -29,5 +42,4 @@ $layout_width: 100%;
 $bottom-content_height: 540px;
 
 // フッター
-$footer-font-size: 1vw;
 $footer-height: 110px;

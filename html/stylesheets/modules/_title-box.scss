@@ -3,14 +3,13 @@
   &__logo {
     padding: 10px;
     border: 2px solid #231916;
-    font-size: 5.2vw;
-    @include font-type(5.2vw, $primaryBlack, 150);
+    @include font-type($fsTitleBoxLogo, $primaryBlack, bold);
   }
 
   &__copy {
     margin-top: 2.2vw;
-    @include font-type(1.8vw, $primaryBlack, bold);
-    line-height: 1.8vw * 1.8;
+    @include font-type($fsTitleBoxCopy, $primaryBlack);
+    line-height: 1.8;
     font-family: 'Raleway', sans-serif;
   }
 }

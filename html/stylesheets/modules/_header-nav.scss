@@ -4,14 +4,14 @@
     top: -1.8vw;
     left: -1.8vw;
     display: inline-block;
-    @include font_type(3.5vw, $mainYellow, normal);
+    @include font-type($fsWelcomeCopy, $mainYellow, normal);
     font-family: 'Kaushan Script', cursive;
   }
 
   .registration-btn {
     float: right;
     padding: 20px;
-    @include font-type(1.2vw, $subBlack, bold);
+    @include font-type($fsRegistration, $subBlack, bold);
 
     a {
       @include reset_anchor;
@@ -30,8 +30,8 @@
 
     &__left-box {
       float: left;
-      @include font_type(2.2vw, $subBlack, bold);
-      line-height: 2.2vw*1.2;
+      @include font-type($fsHeaderBottomLeft, $subBlack, bold);
+      line-height: 1.2;
       font-family: 'Raleway', sans-serif;
     }
 
@@ -40,7 +40,7 @@
       @include clearfix;
 
       &__sub-text {
-        @include font_type(1.5vw, #D3D3D3, bold);
+        @include font-type($fsHeaderBottomRightSub, #D3D3D3, bold);
       }
     }
   }
