@@ -4,7 +4,7 @@
     top: -1.8vw;
     left: -1.8vw;
     display: inline-block;
-    @include font_type(3.5vw, $yellow, normal);
+    @include font_type(3.5vw, $mainYellow, normal);
     font-family: 'Kaushan Script', cursive;
   }
 
