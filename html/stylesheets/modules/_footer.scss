@@ -8,7 +8,7 @@
     min-height: $footer-height;
     max-width: 1440px;
     margin: 0 auto;
-    color: #000;
+    color: $primaryBlack;
     @include clearfix();
   }
 
@@ -29,7 +29,7 @@
         display: block;
         @include reset_anchor();
         @include one_line_middle($footer-height);
-        @include focus-color(#000, #fff);
+        @include focus-color($primaryBlack, #fff);
       }
     }
   }

@@ -11,13 +11,13 @@
 .btn--black {
   @include btn-size($btn_black_p-size, $btn_black_height, $btn_black_height, 0.9vw);
   box-shadow: -4px -4px $mainYellow;
-  background-color: #000;
+  background-color: $primaryBlack;
   color: #FFF;
 }
 
 .btn--border {
   @include btn-size($btn_border_p-size, $btn_border_height, $btn_border_height, 1.3vw, bold);
-  border: 3px solid #000;
+  border: 3px solid $primaryBlack;
   color: $subBlack;
 }
 
