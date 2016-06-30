@@ -8,7 +8,7 @@
   &__title {
     padding-top: 190px;
     text-align: center;
-    @include font-type($fsBottomContent, #0E0E0E, bold)
+    @include font_type($fsBottomContent, #0E0E0E, bold)
   }
 
   &__button {

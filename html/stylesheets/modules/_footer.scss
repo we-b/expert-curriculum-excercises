@@ -1,7 +1,7 @@
 .footer {
   width: $layout-width;
   background-color: $mainYellow;
-  @include font-type($fsFooter, $subBlack, 'bold');
+  @include font_type($fsFooter, $subBlack, 'bold');
   font-family: 'Raleway', sans-serif;
 
   &__wrapper {
@@ -28,7 +28,7 @@
         padding: 0 15px;
         display: block;
         @include reset_anchor();
-        @include one_line_middle($footer-height);
+        @include text_position_to_middle($footer-height);
         @include focus-color($primaryBlack, $primaryWhite);
       }
     }
@@ -37,7 +37,7 @@
   &__copy {
     float: right;
     margin-right: 10%;
-    @include one_line_middle($footer-height);
+    @include text_position_to_middle($footer-height);
     @media screen and (max-width: 1200px) {
       text-align: center;
     }

@@ -24,6 +24,83 @@
   }
 }
 
+.header__bottom {
+  .welcome-copy {
+    position: relative;
+    top: -1.8vw;
+    left: -1.8vw;
+    display: inline-block;
+    @include font_type($fsWelcomeCopy, $mainYellow, normal);
+    font-family: 'Kaushan Script', cursive;
+  }
+
+  .registration-btn {
+    float: right;
+    padding: 20px;
+    @include font_type($fsRegistration, $subBlack, bold);
+
+    a {
+      @include reset_anchor;
+    }
+
+    img {
+      height: 1.3vw;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  .nav {
+    @include clearfix;
+      padding: 40px;
+
+    &__left-box {
+      float: left;
+      @include font_type($fsHeaderBottomLeft, $subBlack, bold);
+      line-height: 1.2;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    &__right-box {
+      float: right;
+      @include clearfix;
+
+      &__sub-text {
+        @include font_type($fsHeaderBottomRightSub, #D3D3D3, bold);
+      }
+    }
+  }
+}
+
+.header-bg {
+  position: absolute;
+  top: 7.7vw;
+  right: 10vw;
+
+  &__box {
+    position: relative;
+
+    &__img {
+      width: 64vw;
+      box-shadow: -10px -10px $mainYellow;
+    }
+
+    &__arrow-left, &__arrow-right {
+      position: absolute;
+      top: 50%;
+      width: 3%;
+    }
+
+    &__arrow-left {
+      left: 40px;
+    }
+
+    &__arrow-right {
+      right: 40px;
+    }
+  }
+}
+
 .header .btns {
   margin-top: 15px;
   @include clearfix;

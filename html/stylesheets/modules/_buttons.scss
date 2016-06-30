@@ -9,26 +9,26 @@
 }
 
 .btn--black {
-  @include btn-size($fsBtnBlack, $hBtnBlack, 1);
+  @include btn_size($fsBtnBlack, $hBtnBlack, 1);
   box-shadow: -4px -4px $mainYellow;
   background-color: $primaryBlack;
   color: $primaryWhite;
 }
 
 .btn--border {
-  @include btn-size($fsBtnBorder, $btnHeight);
+  @include btn_size($fsBtnBorder, $btnHeight);
   border: 3px solid $primaryBlack;
   color: $subBlack;
 }
 
 .btn--gray {
-  @include btn-size($fsBtnGray, $hBtnGray);
+  @include btn_size($fsBtnGray, $hBtnGray, 2);
   background-color: $whiteBlue;
   color: $subBlack;
 }
 
 .btn--yellow {
-  @include btn-size($fsBtnYellow, $btnHeight);
+  @include btn_size($fsBtnYellow, $btnHeight);
   background-color: $mainYellow;
   color: $subBlack;
   font-family: 'Raleway', sans-serif;

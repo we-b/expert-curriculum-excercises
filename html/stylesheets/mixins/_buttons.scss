@@ -1,7 +1,7 @@
-@mixin btn-size($size, $height, $prefix:normal) {
+@mixin btn_size($size, $height, $prefix:normal) {
   $paddingSize: $height * 0.5 + px;
-  @if ($prefix == 1) {
-    $paddingSize: $height + px;
+  @if ($prefix != normal) {
+    $paddingSize: $height * $prefix + px;
   }
   $height: $height + px;
   $size: $size + px;
