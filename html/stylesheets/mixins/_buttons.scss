@@ -1,7 +1,13 @@
-@mixin btn-size($p-size, $height, $line-height, $font-size, $weight:nomal) {
-  padding:      0 $p-size;
-  height:       $height;
-  line-height:  $line-height;
-  font-size:    $font-size;
-  font-weight:  $weight;
+@mixin btn-size($size, $height, $prefix:normal) {
+  $paddingSize: $height * 0.5 + px;
+  @if ($prefix == 1) {
+    $paddingSize: $height + px;
+  }
+  $height: $height + px;
+  $size: $size + px;
+
+  font-size: $size;
+  padding:      0 $paddingSize;
+  height: $height;
+  line-height:  $height;
 }

@@ -25,8 +25,8 @@
   }
 
   .nav {
-    padding: 40px;
     @include clearfix;
+      padding: 40px;
 
     &__left-box {
       float: left;

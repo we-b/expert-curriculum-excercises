@@ -7,10 +7,11 @@ $primaryBlack: #000;
 $primaryWhite: #fff;
 
 // ボタンサイズ
-$btn_black_height:  4.8vw;
-$btn_border_height: 4.1vw;
-$btn_gray_height:   4.5vw;
-$btn_yellow_height: 4.1vw;
+// デフォルト
+$btnHeight: 60;
+// その他: プレフィックスhをつける
+$hBtnGray: 55;
+$hBtnBlack: 70;
 
 // フォントサイズ
 // デフォルト
