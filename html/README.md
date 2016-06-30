@@ -9,15 +9,15 @@ $ sass --watch ./stylesheets/style.scss:style.css
 ## ファイル構成
 
 ```
-projects/
+html/
   |-  index.html
   |-  style.css
   |-  stylesheets/
+        |-  _reset.scss
         |-  style.scss
         |-  config/
         |-  mixin/
         |-  modulels/
-        |-  reset/
         |-  vendor/
         |-  override/
 ```
