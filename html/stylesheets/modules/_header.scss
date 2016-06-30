@@ -51,7 +51,7 @@
   }
 
   .nav {
-    @include clearfix;
+    @include clearfix();
       padding: 40px;
 
     &__left-box {
@@ -63,7 +63,7 @@
 
     &__right-box {
       float: right;
-      @include clearfix;
+      @include clearfix();
 
       &__sub-text {
         @include font_type($fsHeaderBottomRightSub, #D3D3D3, bold);
@@ -103,7 +103,7 @@
 
 .header .btns {
   margin-top: 15px;
-  @include clearfix;
+  @include clearfix();
 
   .btn {
     float: left;
