@@ -18,18 +18,18 @@
 .btn--border {
   @include btn-size($btn_border_p-size, $btn_border_height, $btn_border_height, 1.3vw, bold);
   border: 3px solid #000;
-  color: #111;
+  color: $subBlack;
 }
 
 .btn--gray {
   @include btn-size($btn_gray_p-size, $btn_gray_height, $btn_gray_height, 0.9vw, bold);
   background-color: #F0F5F7;
-  color: #111;
+  color: $subBlack;
 }
 
 .btn--yellow {
   @include btn-size($btn_yellow_p-size, $btn_yellow_height, $btn_yellow_height, 1.3vw, bold);
   background-color: $mainYellow;
-  color: #111;
+  color: $subBlack;
   font-family: 'Raleway', sans-serif;
 }

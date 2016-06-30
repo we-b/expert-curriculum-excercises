@@ -1,7 +1,7 @@
 .footer {
   width: $layout-width;
   background-color: $mainYellow;
-  @include font-type($footer-font-size, #111, 'bold');
+  @include font-type($footer-font-size, $subBlack, 'bold');
   font-family: 'Raleway', sans-serif;
 
   &__wrapper {

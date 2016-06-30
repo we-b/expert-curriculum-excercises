@@ -11,7 +11,7 @@
   .registration-btn {
     float: right;
     padding: 20px;
-    @include font-type(1.2vw, #111, bold);
+    @include font-type(1.2vw, $subBlack, bold);
 
     a {
       @include reset_anchor;
@@ -30,7 +30,7 @@
 
     &__left-box {
       float: left;
-      @include font_type(2.2vw, #111, bold);
+      @include font_type(2.2vw, $subBlack, bold);
       line-height: 2.2vw*1.2;
       font-family: 'Raleway', sans-serif;
     }
