@@ -29,7 +29,7 @@
         display: block;
         @include reset_anchor();
         @include one_line_middle($footer-height);
-        @include focus-color($primaryBlack, #fff);
+        @include focus-color($primaryBlack, $primaryWhite);
       }
     }
   }
