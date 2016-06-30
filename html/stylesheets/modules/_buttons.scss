@@ -23,7 +23,7 @@
 
 .btn--gray {
   @include btn-size($btn_gray_p-size, $btn_gray_height, $btn_gray_height, 0.9vw, bold);
-  background-color: #F0F5F7;
+  background-color: $whiteBlue;
   color: $subBlack;
 }
 
