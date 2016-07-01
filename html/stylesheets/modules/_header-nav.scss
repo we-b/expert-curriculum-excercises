@@ -1,0 +1,48 @@
+.header__bottom {
+  .welcome-copy {
+    position: relative;
+    top: -1.8vw;
+    left: -1.8vw;
+    display: inline-block;
+    @include font_type(3.5vw, $yellow, normal);
+    font-family: 'Kaushan Script', cursive;
+  }
+
+  .registration-btn {
+    float: right;
+    padding: 20px;
+    @include font-type(1.2vw, #111, bold);
+
+    a {
+      @include reset_anchor;
+    }
+
+    img {
+      height: 1.3vw;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  .nav {
+    padding: 40px;
+    @include clearfix;
+
+    &__left-box {
+      float: left;
+      @include font_type(2.2vw, #111, bold);
+      line-height: 2.2vw*1.2;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    &__right-box {
+      float: right;
+      @include clearfix;
+
+      &__sub-text {
+        @include font_type(1.5vw, #D3D3D3, bold);
+      }
+    }
+  }
+}
+

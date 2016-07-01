@@ -1,0 +1,12 @@
+@mixin focus-opacity($num) {
+  &:hover {
+    opacity: $num;
+  }
+}
+
+@mixin focus-color($bg-color, $color) {
+  &:hover {
+    background-color: $bg-color;
+    color: $color;
+  }
+}
