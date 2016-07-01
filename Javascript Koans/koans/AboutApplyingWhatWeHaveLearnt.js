@@ -67,14 +67,14 @@ describe("About Applying What We Have Learnt", function() {
 
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
-    var sum = _.range(1000).reduce(function(sum, a){ 
+    var sum = _.range(1000).reduce(function(sum, a){
       //reduceアクションによって、繰り返し処理を簡単に書く事ができた。第二引数に渡す方が配列の頭から順番に入っていくもの、第一引数に渡すものがどんどん変化していくもの。
       if (a % 3 === 0 || a % 5 === 0) {
         sum += a;
       }
       return sum} );    /* try chaining range() and reduce() */
 
-    expect(233168).toBe(sum);
+    expect(FILL_ME_IN).toBe(sum);
   });
 
   /*********************************************************************************/
@@ -89,8 +89,8 @@ describe("About Applying What We Have Learnt", function() {
             //ingredientCount[素材の名前]の値は0のように数字が入っている。今回出てきたものは初めての場合、0に一が代入される。
         }
     }
-
-    expect(ingredientCount['mushrooms']).toBe(2);//
+//ingredientCount['mushrooms']
+    expect(FILL_ME_IN).toBe(2);//
   });
 
   it("should count the ingredient occurrence (functional)", function () {
