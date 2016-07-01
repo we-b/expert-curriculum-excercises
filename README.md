@@ -1,4 +1,4 @@
-# EXPERT curriculium excercises
+# Javascript問題
 
 ## 学習の目標
 
@@ -69,16 +69,19 @@ RubyのRSpecと同様に、JavaScriptのテストを実行する際Jasmineとい
 ## Koansの進め方
 
 リンクからKoansをダウンロードします。(一応記述)
-Runner.htmlをブラウザ上で表示します。
+KoansRunner.htmlをブラウザ上で表示します。
 
-すると、エラーが大量に発生しているのが分かります。
-赤い部分が不正解の部分、緑の場合その問題が正解です。
+Koansを起動すると、赤いボックスが1つ表示されています。
+また、ボックスの左上部分には章のタイトル、問題番号・名が表示されています。
 
-穴埋め問題のように、テストケースに記述されている(FILL_ME_IN)を、解答と書き換えます。
+JavaScript Koansでは、Sublime Textでその章のJSファイルを編集し、ビューで正解かどうかをチェックします。
+
+修正する部分は、"FILL_ME_IN"と書かれた部分を、解答に書き換えるだけです。
+
+ボックスが赤い場合不正解、緑の場合正解です。
 全53問の解答が終わりましたら提出してください。
 
-
-## 解いていく問題の順
+解いていく問題の順番は以下の通りです。
 
 1. AboutExpects.js
 1. AboutArrays.js
@@ -94,3 +97,10 @@ Runner.htmlをブラウザ上で表示します。
 
 まずAboutExpects.jsの問題から解き始めます。
 解答のヒントはコメントアウトで書いてありますので参考にしながら問いてください。
+
+## 参考サイト
+問題を解いていく上で、以下のサイトが参考になるので、分からない箇所があればチェックしましょう。
+
+- [Javascriptのオブジェクト指向についての基本まとめ](http://qiita.com/katsunory/items/3b07b924280f18b11040)
+- [Arrayの基礎知識と各メソッドの使用方法](http://qiita.com/sh19910711/items/3c0776fd8cc1797f955d)
+- [unshift, shift, pop, pushが混乱するので、絵で整理した](http://maeharin.hatenablog.com/entry/20130122/unshift_shift_pop_push)
