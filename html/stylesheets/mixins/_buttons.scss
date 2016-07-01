@@ -4,9 +4,9 @@
     $paddingSize: $height * $prefix + px;
   }
   $height: $height + px;
-  $size: $size + px;
 
-  font-size: $size;
+  // font-size: $size;
+  @include fontsize($size);
   padding:      0 $paddingSize;
   height: $height;
   line-height:  $height;
