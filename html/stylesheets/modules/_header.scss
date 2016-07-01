@@ -98,6 +98,19 @@
     &__arrow-right {
       right: 40px;
     }
+
+    &__copy {
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.2);
+      @include font_type($fsHeaderImgCopy, $primaryWhite, 800);
+      text-shadow: 0 1px 1px rgba($primaryBlack, 0.7);
+
+      &--sub {
+        font-weight: 100;
+      }
+    }
   }
 }
 

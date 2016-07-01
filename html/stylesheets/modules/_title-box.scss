@@ -4,6 +4,7 @@
     padding: 10px;
     border: 2px solid #231916;
     @include font_type($fsTitleBoxLogo, $primaryBlack, bold);
+    font-family: 'Raleway', sans-serif;
   }
 
   &__copy {
