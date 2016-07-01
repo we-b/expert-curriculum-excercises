@@ -83,10 +83,10 @@ JsKoansReporter.prototype.reportRunnerResults = function(runner) {
   var enlightenmentMessage;
   if (this.failedSpecs === 0) {
     status = 'passed';
-    enlightenmentMessage = "Enlightenment!";
+    enlightenmentMessage = "おめでとう！お主は悟りを開くことが出来た!";
   } else {
     status = 'failed';
-    enlightenmentMessage = "You have not yet reached enlightenment...";
+    enlightenmentMessage = "あなたはまだ悟りに達していない… 全ての問題をクリアしよう!";
   }
 
   var suitesCount = runner.suites().length;
@@ -98,17 +98,17 @@ JsKoansReporter.prototype.reportRunnerResults = function(runner) {
       this.createDom('div', { className: 'enlightenment-' + status }, enlightenmentMessage),
       this.createDom('div', { className: 'completion' }, 
         this.createDom('div', {},
-          this.createDom('span', { className: 'key' }, "Subjects covered: "),
+          this.createDom('span', { className: 'key' }, "正解した章: "),
           this.createDom('span', { className: 'value' }, this.noOfSubjects - this.failedSubjects + "/" + this.noOfSubjects)
           ),
         this.createDom('div', {},
-          this.createDom('span', { className: 'key' }, "Koans learned: "),
+          this.createDom('span', { className: 'key' }, "正解した問題数: "),
           this.createDom('span', { className: 'value' }, specsCount - this.failedSpecs + "/" + runner.specs().length)
           ),
         this.createDom('div', { className: 'options' },
-          this.createDom('label', { "for": "__jsKoans_showPassed__" }, " Show passed koans"),
+          this.createDom('label', { "for": "__jsKoans_showPassed__" }, " 正解した問題を見る"),
           showPassed = this.createDom('input', { id: "__jsKoans_showPassed__", type: 'checkbox', checked: '' }),
-          this.createDom('label', { "for": "__jsKoans_showAllFailed__" }, " Look ahead"),
+          this.createDom('label', { "for": "__jsKoans_showAllFailed__" }, " 全ての問題を見る"),
           showAllFailed = this.createDom('input', { id: "__jsKoans_showAllFailed__", type: 'checkbox' })
           )
         )      
