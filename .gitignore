@@ -1,0 +1,6 @@
+html/vendor/
+html/style.css
+html/style.css.map
+html/.sass-cache/
+html/.DS_Store
+html/.bundle/
