@@ -39,6 +39,7 @@ $resetCSS: 1 !default;
 
   body {
     line-height:1;
+    font-size: $fontSize + px;
   }
 
   article,aside,details,figcaption,figure,

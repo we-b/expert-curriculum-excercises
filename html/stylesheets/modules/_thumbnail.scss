@@ -10,11 +10,11 @@
 
     .title {
       margin: 10px 0;
-      @include font-type(1.1%, #413531, bold);
+      @include font_type($fsThumbTitle, #413531, bold);
     }
 
     p {
-      @include font-type(1.1%, #685F5C);
+      @include font_type($fsThumbBody, #685F5C);
       word-wrap: break-word;
     }
   }

@@ -20,8 +20,9 @@
 // ミックスインファイル
 @import './mixins/clearfix';
 @import './mixins/reset_modifier';
-@import './mixins/text_middle.scss';
+@import './mixins/text_position_to_middle';
 @import './mixins/accent';
+@import './mixins/fontsize';
 @import './mixins/font_type';
 @import './mixins/buttons';
 @import './mixins/grid';
@@ -31,8 +32,6 @@
 @import './modules/buttons';
 @import './modules/thumbnail';
 @import './modules/header';
-@import './modules/header-nav';
-@import './modules/header-bg';
 @import './modules/title-box';
 @import './modules/upper-content';
 @import './modules/bottom_content';

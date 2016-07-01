@@ -1,5 +1,5 @@
-@mixin font-type($size:12px, $color:#000, $weight:normal) {
-  font-size: $size;
+@mixin font_type($size:$fontSize, $color:#000, $weight:normal) {
+  @include fontsize($size);
   color: $color;
   font-weight: $weight;
 }
