@@ -3,36 +3,3 @@
 // 各ファイルのインポート
 // ===================================================================
 
-// 設定用ファイル
-@import './config/setting';
-// 変数ファイル
-@import './config/variables';
-
-// フォント読み込みファイル
-@import './config/fonts';
-@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
-@import url(https://fonts.googleapis.com/css?family=Krona+One);
-@import url(https://fonts.googleapis.com/css?family=Raleway:800);
-
-// リセットCSS
-@import './reset';
-
-// ミックスインファイル
-@import './mixins/clearfix';
-@import './mixins/reset_modifier';
-@import './mixins/text_position_to_middle';
-@import './mixins/accent';
-@import './mixins/fontsize';
-@import './mixins/font_type';
-@import './mixins/buttons';
-@import './mixins/grid';
-
-// デザインモジュール
-@import './modules/layout';
-@import './modules/buttons';
-@import './modules/thumbnail';
-@import './modules/header';
-@import './modules/title-box';
-@import './modules/upper-content';
-@import './modules/bottom_content';
-@import './modules/footer';
