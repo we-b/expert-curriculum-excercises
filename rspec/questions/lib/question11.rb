@@ -7,6 +7,10 @@ class Profile
     @handedness = handedness
   end
 
+  def all_profile
+    "#{@name}, #{@gender}, #{@blood_type}, #{@handedness}"
+  end
+
   def name_gender
     "#{@name}, #{@gender}"
   end
@@ -17,10 +21,6 @@ class Profile
 
   def name_gender_handedness
     "#{@name}, #{@gender}, #{@handedness}"
-  end
-
-  def all_profile
-    "#{@name}, #{@gender}, #{@blood_type}, #{@handedness}"
   end
 
   def gender_blood_type
