@@ -40,7 +40,7 @@ $ bundle install
 <h2 id="run_test">3. テストの実行</h2>
 
 ```
-$ bundle exec rspec ファイル名
+$ rspec ファイル名
 ```
 
 <h2 id="how_to_answer">4. 進め方</h2>
