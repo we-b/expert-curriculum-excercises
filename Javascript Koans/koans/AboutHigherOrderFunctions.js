@@ -54,7 +54,7 @@ describe('第6章 高階関数を理解しよう', function () {
     expect(numbers).toEqual(FILL_ME_IN);//[1,2,3]
   });
 
-  it("37: 「allメソッド」", function () {
+  it("35: 「allメソッド」", function () {
     var onlyEven = [2,4,6];
     var mixedBag = [2,4,5,6];
 
@@ -65,7 +65,7 @@ describe('第6章 高階関数を理解しよう', function () {
     expect(_(mixedBag).all(isEven)).toBe(FILL_ME_IN);//false
   });
 
-  it("38: 「anyメソッド」" , function () {
+  it("36: 「anyメソッド」" , function () {
     var onlyEven = [2,4,6];
     var mixedBag = [2,4,5,6];
     //anyメソッドは、allメソッドと対比で、一つでも与えれた条件にtrueがあればtrueを返す。
@@ -75,7 +75,7 @@ describe('第6章 高階関数を理解しよう', function () {
     expect(_(mixedBag).any(isEven)).toBe(FILL_ME_IN);//true
   });
 
-  it("39: 「_.rangeを使った配列の生成」", function() {
+  it("37: 「_.rangeを使った配列の生成」", function() {
       //_.rangeは、第一引数に指定した数から第二引数に指定された数までの配列を作る。第二引数は0から始まった数字となる。引数を3つとれば、3つ目の数をとばした配列を作る事もできる。
       expect(_.range(3)).toEqual(FILL_ME_IN);//[0,1,2]
       expect(_.range(1, 4)).toEqual(FILL_ME_IN);//[1,2,3]
@@ -84,12 +84,12 @@ describe('第6章 高階関数を理解しよう', function () {
       //今回は引数を(0,-4,-1)としたので、0から-3までの-1飛ばしの配列が返され、[0,-1,-2,-3]の配列が帰ってきた。
   });
 
-  it("40: 「flattenメソッドで配列を展開」", function() {
+  it("38: 「flattenメソッドで配列を展開」", function() {
       //flattenメソッドは配列の中の配列を展開するメソッド。
       expect(_([ [1, 2], [3, 4] ]).flatten()).toEqual(FILL_ME_IN);//[1,2,3,4]
   });
 
-  it("41: 「高階関数」", function() { //should use chain() ... .value() to use multiple higher order functions
+  it("39: 「高階関数」", function() { //should use chain() ... .value() to use multiple higher order functions
       var result = _([ [0, 1], 2 ]).chain()
                        .flatten()//配列の中の配列を展開=>[0,1,2]
                        .map(function(x) { return x+1 } )//mapメソッドは配列の巣別の要素に順番に処理を行わせ、新たな配列を作り出す。
