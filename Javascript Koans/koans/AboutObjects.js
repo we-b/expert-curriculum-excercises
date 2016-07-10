@@ -1,24 +1,48 @@
 describe("第4章 オブジェクトの仕組みを理解しよう ", function () {
 
-  describe("19: 「プロパティ」", function () {
+  describe("プロパティについて", function () {
     var mentor;
 
     beforeEach(function () {
        mentor = { mentor1: "Abe", mentor2: "Shinbo" };
     });
 
-    it("20: 「プロパティの呼び出し」", function () {
+    it("19: 「プロパティの呼び出し」", function () {
       expect(mentor.mentor1).toBe(FILL_ME_IN);
     });
 
-    it("21: 「プロパティ名の大文字と小文字」", function () {
+    it("20: 「プロパティ名の大文字と小文字」", function () {
       expect(mentor.mentor2).toBe(FILL_ME_IN);
       expect(mentor.Mentor2).toBe(FILL_ME_IN);
     });
   });
 
+  describe("'in'について", function () {
+    var megalomaniac;
+    beforeEach(function () {
+      megalomaniac = {
+        mastermind: "The Monarch",
+        henchwoman: "Dr Girlfriend",
+        theBomb: true
+      };
+    });
 
-  it("22: 「メソッド」", function () {
+    it("21: 「'in'の使い方②」", function () {
+
+      var hasBomb = "theBomb" in megalomaniac;
+
+      expect(hasBomb).toBe(FILL_ME_IN);
+    });
+
+    it("22: 「'in'の使い方③」", function () {
+
+      var hasDetonator = "theDetonator" in megalomaniac;
+
+      expect(hasDetonator).toBe(FILL_ME_IN);
+    });
+  });
+
+  it("23: 「メソッド」", function () {
     var students = {
       student1 : "satou",
       student2 : "tanaka",
@@ -32,7 +56,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
     expect(FILL_ME_IN).toMatch(callStudents);
   });
 
-  it("23: 「`this`の使い方」", function () {
+  it("24: 「'this'の使い方」", function () {
     var currentDate = new Date();
     var currentYear = (currentDate.getFullYear());
     var megalomaniac = {
@@ -48,32 +72,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
     expect(megalomaniac.calculateAge()).toBe(FILL_ME_IN);
   });
 
-  describe("24: 「'in'の使い方①」", function () {
-    var megalomaniac;
-    beforeEach(function () {
-      megalomaniac = {
-        mastermind: "The Monarch",
-        henchwoman: "Dr Girlfriend",
-        theBomb: true
-      };
-    });
-
-    it("25: 「'in'の使い方②」", function () {
-
-      var hasBomb = "theBomb" in megalomaniac;
-
-      expect(hasBomb).toBe(FILL_ME_IN);
-    });
-
-    it("26: 「'in'の使い方③」", function () {
-
-      var hasDetonator = "theDetonator" in megalomaniac;
-
-      expect(hasDetonator).toBe(FILL_ME_IN);
-    });
-  });
-
-  it("27: 「プロパティの追加/削除」", function () { //should know that properties can be added and deleted
+  it("25: 「プロパティの追加/削除」", function () { //should know that properties can be added and deleted
     var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
     expect("secretary" in megalomaniac).toBe(FILL_ME_IN);
@@ -86,7 +85,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
   });
 
 
-  it("28: 「プロトタイプチェーン」", function () { //should use prototype to add to all objects
+  it("26: 「プロトタイプチェーン」", function () { //should use prototype to add to all objects
       function Circle(radius)
       {
         this.radius = radius;
