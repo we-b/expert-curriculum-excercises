@@ -1,6 +1,6 @@
 var _; //globals
 
-describe("About Applying What We Have Learnt", function() {
+describe("最終章 「総復習」", function() {
 
   var products;
 
@@ -16,7 +16,7 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
 
-  it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (imperative)", function () {
+  it("48: given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (imperative)", function () {
 
     var i,j,hasMushrooms, productsICanEat = [];
 
@@ -41,7 +41,7 @@ describe("About Applying What We Have Learnt", function() {
     expect(productsICanEat.length).toBe(FILL_ME_IN);//1
   });
 
-  it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", function () {
+  it("49: given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", function () {
 
       var productsICanEat = [];
 
@@ -52,7 +52,7 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
 
-  it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)", function () {
+  it("50: should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)", function () {
 
     var sum = 0;
     for(var i=1; i<1000; i+=1) {
@@ -65,7 +65,7 @@ describe("About Applying What We Have Learnt", function() {
     expect(sum).toBe(FILL_ME_IN);//233168
   });
 
-  it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
+  it("51: should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
     var sum = _.range(1000).reduce(function(sum, a){
       //reduceアクションによって、繰り返し処理を簡単に書く事ができた。第二引数に渡す方が配列の頭から順番に入っていくもの、第一引数に渡すものがどんどん変化していくもの。
@@ -78,7 +78,7 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   /*********************************************************************************/
-   it("should count the ingredient occurrence (imperative)", function () {
+   it("52: should count the ingredient occurrence (imperative)", function () {
     var ingredientCount = { "{ingredient name}": 0 };
     //javascriptでは、ハッシュのキーにスペースが入っていても問題ない。
 
@@ -93,36 +93,11 @@ describe("About Applying What We Have Learnt", function() {
     expect(FILL_ME_IN).toBe(2);//
   });
 
-  it("should count the ingredient occurrence (functional)", function () {
+  it("53: should count the ingredient occurrence (functional)", function () {
     var ingredientCount = { "{ingredient name}": 0 };
 
     /* chain() together map(), flatten() and reduce() */
 
     expect(ingredientCount['mushrooms']).toBe(FILL_ME_IN);
   });
-
-  /*********************************************************************************/
-  /* UNCOMMENT FOR EXTRA CREDIT */
-  /*
-  it("should find the largest prime factor of a composite number", function () {
-
-  });
-
-  it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
-
-  });
-
-  it("should find the smallest number divisible by each of the numbers 1 to 20", function () {
-
-
-  });
-
-  it("should find the difference between the sum of the squares and the square of the sums", function () {
-
-  });
-
-  it("should find the 10001st prime", function () {
-
-  });
-  */
 });
