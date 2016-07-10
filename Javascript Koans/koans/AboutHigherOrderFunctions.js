@@ -5,9 +5,9 @@ var _; //globals
       that you would expect in Prototype.js (or Ruby), but without extending any of the built-in JavaScript objects.
       It's the tie to go along with jQuery's tux."
  */
-describe("About Higher Order Functions", function () {
+describe('第6章 高階関数を理解しよう', function () {
 
-  it("should use filter to return array items that meet a criteria", function () {
+  it("31: 「filterメソッドで配列から条件に一致した要素を取り出す」", function () {
     var numbers = [1,2,3];
     var odd = _(numbers).filter(function (x) { return x % 2 !== 0 });
     //filterメソッドは、各要素に対して指定した条件をクリアしているものだけそ返すメソッド
@@ -18,7 +18,7 @@ describe("About Higher Order Functions", function () {
     expect(numbers.length).toBe(FILL_ME_IN);//3
   });
 
-  it("should use 'map' to transform each element", function () {
+  it("32: 「mapメソッドで配列内の要素を代入&処理」", function () {
     var numbers = [1, 2, 3];
     //mapメソッドは、配列の各要素に対して指定した捜査を適用させたものを返す。
     //今回は配列の中身を一時的な変数雨xに一個づつ順番に代入し、x + 1の処理を行った後結果を返している。
@@ -28,7 +28,7 @@ describe("About Higher Order Functions", function () {
     expect(numbers).toEqual(FILL_ME_IN);//[1,2,3]
   });
 
-  it("should use 'reduce' to update the same result on each iteration", function () {
+  it("33: 「reduceメソッドで繰り返し処理を行い、numbersの配列と同じ結果を出力しよう」", function () {
     var numbers = [1, 2, 3];
     //reduceメソッドは、引数に2つ変数を用意し、一つ目は返す変数、二つ目は配列の中身を順番に取り出して入れておく変数を用意する。
     //今回は、memoが返す変数であり、memoに対して順番に配列の中身xを足している。
@@ -39,7 +39,7 @@ describe("About Higher Order Functions", function () {
     expect(numbers).toEqual(FILL_ME_IN);//[1,2,3]
   });
 
-  it("should use 'forEach' for simple iteration", function () {
+  it("34: 「forEach文を使った繰り返し処理」", function () {
     var numbers = [1,2,3];
     var msg = "";
     var isEven = function (item) {
@@ -54,7 +54,7 @@ describe("About Higher Order Functions", function () {
     expect(numbers).toEqual(FILL_ME_IN);//[1,2,3]
   });
 
-  it("should use 'all' to test whether all items pass condition", function () {
+  it("37: 「allメソッド」", function () {
     var onlyEven = [2,4,6];
     var mixedBag = [2,4,5,6];
 
@@ -65,7 +65,7 @@ describe("About Higher Order Functions", function () {
     expect(_(mixedBag).all(isEven)).toBe(FILL_ME_IN);//false
   });
 
-  it("should use 'any' to test if any items passes condition" , function () {
+  it("38: 「anyメソッド」" , function () {
     var onlyEven = [2,4,6];
     var mixedBag = [2,4,5,6];
     //anyメソッドは、allメソッドと対比で、一つでも与えれた条件にtrueがあればtrueを返す。
@@ -75,7 +75,7 @@ describe("About Higher Order Functions", function () {
     expect(_(mixedBag).any(isEven)).toBe(FILL_ME_IN);//true
   });
 
-  it("should use range to generate an array", function() {
+  it("39: 「_.rangeを使った配列の生成」", function() {
       //_.rangeは、第一引数に指定した数から第二引数に指定された数までの配列を作る。第二引数は0から始まった数字となる。引数を3つとれば、3つ目の数をとばした配列を作る事もできる。
       expect(_.range(3)).toEqual(FILL_ME_IN);//[0,1,2]
       expect(_.range(1, 4)).toEqual(FILL_ME_IN);//[1,2,3]
@@ -84,12 +84,12 @@ describe("About Higher Order Functions", function () {
       //今回は引数を(0,-4,-1)としたので、0から-3までの-1飛ばしの配列が返され、[0,-1,-2,-3]の配列が帰ってきた。
   });
 
-  it("should use flatten to make nested arrays easy to work with", function() {
+  it("40: 「flattenメソッドで配列を展開」", function() {
       //flattenメソッドは配列の中の配列を展開するメソッド。
       expect(_([ [1, 2], [3, 4] ]).flatten()).toEqual(FILL_ME_IN);//[1,2,3,4]
   });
 
-  it("should use chain() ... .value() to use multiple higher order functions", function() {
+  it("41: 「高階関数」", function() { //should use chain() ... .value() to use multiple higher order functions
       var result = _([ [0, 1], 2 ]).chain()
                        .flatten()//配列の中の配列を展開=>[0,1,2]
                        .map(function(x) { return x+1 } )//mapメソッドは配列の巣別の要素に順番に処理を行わせ、新たな配列を作り出す。
