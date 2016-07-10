@@ -29,9 +29,17 @@ JavaScript Koansで使用される言語は生のJavaScript(plain JavaScript)で
 ## ディレクトリ構造
 
 ```
-Javascript Koans/
-│
+JavaScript Koans/
 ├── KoansRunner.html
+├── answers
+│   ├── AboutApplyingWhatWeHaveLearnt.js
+│   ├── AboutArrays.js
+│   ├── AboutExpects.js
+│   ├── AboutFunctions.js
+│   ├── AboutHigherOrderFunctions.js
+│   ├── AboutInheritance.js
+│   ├── AboutMutability.js
+│   └── AboutObjects.js
 ├── jasmine
 │   └── runner_specs
 │       ├── TestJSKoansRunner.html
@@ -60,6 +68,7 @@ Javascript Koans/
     │   ├── jsTestDriver.conf
     │   └── run_all_koans.sh
     └── underscore-min.js
+
 ```
 
 ### Jasmineとは？
@@ -97,6 +106,9 @@ JavaScript Koansでは、Sublime Textでその章のJSファイルを編集し�
 
 まずAboutExpects.jsの問題から解き始めます。
 解答のヒントはコメントアウトで書いてありますので参考にしながら問いてください。
+
+正解はanswersディレクトリに同じファイル名で格納されていますので解き終わったら確認してください。
+
 
 ## 参考サイト
 問題を解いていく上で、以下のサイトが参考になるので、分からない箇所があればチェックしましょう。
