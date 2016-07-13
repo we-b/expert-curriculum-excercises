@@ -53,7 +53,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
     };
 
     var watchStudents = students.callStudents(4);
-    expect(FILL_ME_IN).toMatch(callStudents);
+    expect(FILL_ME_IN).toMatch(watchStudents);
   });
 
   it("24: 「'this'の使い方」", function () {
