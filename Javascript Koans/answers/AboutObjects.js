@@ -92,17 +92,17 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
       }
 
       var simpleCircle = new Circle(10);
-      var colouredCircle = new Circle(5);
-      colouredCircle.colour = "red";
+      var coloredCircle = new Circle(5);
+      coloredCircle.color = "red";
 
-      expect(simpleCircle.colour).toBe();
-      expect(colouredCircle.colour).toBe('red');
+      expect(simpleCircle.color).toBe();
+      expect(coloredCircle.color).toBe('red');
 
       Circle.prototype.describe = function () {
         return "This circle has a radius of: " + this.radius;
       };
 
       expect(simpleCircle.describe()).toBe('This circle has a radius of: 10');
-      expect(colouredCircle.describe()).toBe('This circle has a radius of: 5');
+      expect(coloredCircle.describe()).toBe('This circle has a radius of: 5');
   });
 });
