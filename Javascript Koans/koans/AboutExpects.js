@@ -11,7 +11,6 @@ describe('第1章 チュートリアル', function() {
     expect(actualValue === expectedValue).toBeTruthy();
   });
 
-  // Some ways of asserting equality are better than others.
   it('3: 「変数の一致①」', function() {
     var expectedValue = FILL_ME_IN;
     var actualValue = 1 + 1;

@@ -9,7 +9,7 @@ describe("第3章 関数を実践しながら理解しよう", function() {
     expect(add(1, 2)).toBe(FILL_ME_IN);
   });
 
-  it("14: 「ローカル変数とグローバル変数」", function () {//should know internal variables override outer variables
+  it("14: 「ローカル変数とグローバル変数」", function () {
     var message = "Hello!";
 
     function getMessage() {
@@ -26,7 +26,7 @@ describe("第3章 関数を実践しながら理解しよう", function() {
     expect(message).toBe(FILL_ME_IN);
   });
 
-  it("15: 「レキシカルスコープ」", function () {//should have lexical scoping
+  it("15: 「レキシカルスコープ」", function () {
     var variable = "top-level";
     function parentfunction() {
       var variable = "local";
@@ -82,7 +82,7 @@ describe("第3章 関数を実践しながら理解しよう", function() {
     expect(returnAllArgs("first", "second", "third")).toBe(FILL_ME_IN);
   });
 
-  it("「18: 「関数と変数」", function () {//should pass functions as values
+  it("「18: 「関数と変数」", function () {
 
     var appendRules = function (name) {
       return name + " rules!";

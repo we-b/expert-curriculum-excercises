@@ -1,9 +1,8 @@
 describe('第2章 JavasSriptの配列を理解しよう', function() {
 
-  //We shall contemplate truth by testing reality, via spec expectations.
   it("6:「配列の呼び出し」", function() {
     var emptyArray = [];
-    expect(typeof(emptyArray)).toBe(FILL_ME_IN); //A mistake? - http://javascript.crockford.com/remedial.html
+    expect(typeof(emptyArray)).toBe(FILL_ME_IN);
     expect(emptyArray.length).toBe(FILL_ME_IN);
 
     var multiTypeArray = [0, 1, "two", function () { return 3; }, {value1: 4, value2: 5}, [6, 7]];

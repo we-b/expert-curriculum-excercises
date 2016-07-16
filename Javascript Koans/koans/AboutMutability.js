@@ -1,13 +1,13 @@
 describe("第5章 「変数を理解しよう」", function() {
 
-  it("27: 「変数として扱うプロパティ」", function () { // should expect object properties to be public and mutable
+  it("27: 「変数として扱うプロパティ」", function () {
     var aPerson = {firstname: "John", lastname: "Smith" };
     aPerson.firstname = "Alan";
 
     expect(aPerson.firstname).toBe(FILL_ME_IN);
   });
 
-  it("28: 「コンストラクタとして扱うプロパティ」", function () { //should understand that constructed properties are public and mutable
+  it("28: 「コンストラクタとして扱うプロパティ」", function () {
     function Person(firstname, lastname)
     {
       this.firstname = firstname;
@@ -19,7 +19,7 @@ describe("第5章 「変数を理解しよう」", function() {
     expect(aPerson.firstname).toBe(FILL_ME_IN);
   });
 
-  it("29: 「プロトタイプチェーンを使用した変数」", function () { //should expect prototype properties to be public and mutable
+  it("29: 「プロトタイプチェーンを使用した変数」", function () {
     function Person(firstname, lastname)
     {
       this.firstname = firstname;
@@ -39,7 +39,7 @@ describe("第5章 「変数を理解しよう」", function() {
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
   });
 
-  it("30: 「コンストラクタの二重構造」", function () { //should know that variables inside a constructor and constructor args are private
+  it("30: 「コンストラクタの二重構造」", function () {
     function Person(firstname, lastname)
     {
       var fullName = firstname + " " + lastname;

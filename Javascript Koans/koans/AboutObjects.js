@@ -72,7 +72,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
     expect(megalomaniac.calculateAge()).toBe(FILL_ME_IN);
   });
 
-  it("25: 「プロパティの追加/削除」", function () { //should know that properties can be added and deleted
+  it("25: 「プロパティの追加/削除」", function () {
     var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
     expect("secretary" in megalomaniac).toBe(FILL_ME_IN);
@@ -85,7 +85,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
   });
 
 
-  it("26: 「プロトタイプチェーン」", function () { //should use prototype to add to all objects
+  it("26: 「プロトタイプチェーン」", function () {
       function Circle(radius)
       {
         this.radius = radius;
