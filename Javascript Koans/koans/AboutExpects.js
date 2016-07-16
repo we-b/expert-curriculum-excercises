@@ -1,7 +1,7 @@
 describe('第1章 チュートリアル', function() {
 
   it('1: 「Koansの使い方」', function() {
-    expect(FILL_ME_IN).toBeTruthy();
+    expect(FILL_ME_IN).toBe(true);
   });
 
   it('2: 「厳密演算子」', function() {
