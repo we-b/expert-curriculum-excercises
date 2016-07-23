@@ -21,7 +21,6 @@ var Tweet = function(author, body) {
   this.uuid = utils.uuid()
   this.author = author
   this.body = body
-  this.createdAt
   this.isFavorited = false
 }
 
