@@ -1,1 +1,0 @@
-# EXPERT curriculium excercises
