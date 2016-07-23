@@ -20,4 +20,3 @@ var utils = {
 $(function() {
   new App()
 })
-
