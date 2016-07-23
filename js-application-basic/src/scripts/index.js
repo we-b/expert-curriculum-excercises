@@ -16,6 +16,10 @@ var utils = {
   }
 }
 
+var App = function() {
+}
+
+
 // applicationの起動
 $(function() {
   new App()
