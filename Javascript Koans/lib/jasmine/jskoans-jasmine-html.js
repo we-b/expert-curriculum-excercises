@@ -45,7 +45,7 @@ JsKoansReporter.prototype.reportRunnerStarting = function(runner) {
   for (var i = 0; i < suites.length; i++) {
     var suite = suites[i];
     var suiteDiv = this.createDom('div', { className: 'suite' },
-        this.createDom('a', { className: 'description', href: '?spec=' + encodeURIComponent(suite.getFullName()) }, 
+        this.createDom('a', { className: 'description', href: '?spec=' + encodeURIComponent(suite.getFullName()) },
           this.getSuiteDescription(suite)));
     this.suiteDivs[suite.id] = suiteDiv;
     var parentDiv = this.outerDiv;
@@ -93,10 +93,10 @@ JsKoansReporter.prototype.reportRunnerResults = function(runner) {
   var specsCount = runner.specs().length;
   var showPassed;
   var showAllFailed;
-  
-  var progress = this.createDom('div', {}, 
+
+  var progress = this.createDom('div', {},
       this.createDom('div', { className: 'enlightenment-' + status }, enlightenmentMessage),
-      this.createDom('div', { className: 'completion' }, 
+      this.createDom('div', { className: 'completion' },
         this.createDom('div', {},
           this.createDom('span', { className: 'key' }, "正解した章: "),
           this.createDom('span', { className: 'value' }, this.noOfSubjects - this.failedSubjects + "/" + this.noOfSubjects)
@@ -111,10 +111,10 @@ JsKoansReporter.prototype.reportRunnerResults = function(runner) {
           this.createDom('label', { "for": "__jsKoans_showAllFailed__" }, " 全ての問題を見る"),
           showAllFailed = this.createDom('input', { id: "__jsKoans_showAllFailed__", type: 'checkbox' })
           )
-        )      
+        )
       );
   this.runnerMessageSpan.replaceChild(this.createDom('div', { className: 'description', href: '?'}, progress), this.runnerMessageSpan.firstChild);
-  
+
   var self = this;
   showPassed.onchange = function(evt) {
     if (evt.target.checked) {
@@ -136,7 +136,7 @@ JsKoansReporter.prototype.reportSuiteResults = function(suite) {
   var results = suite.results();
   var status = results.passed() ? 'passed' : 'failed';
   if (results.totalCount == 0 || this.failedSubjects > 0) {
-    status += '-skipped';  
+    status += '-skipped';
   }
 
   if (suite.parentSuite == null) {
@@ -185,11 +185,11 @@ JsKoansReporter.prototype.reportSpecResults = function(spec) {
     var result = resultItems[i];
 
     if (result.type == 'expect' && result.passed && !result.passed()) {
+      // messagesDiv.appendChild(
+      //     this.createDom('div', { className: 'errorMessage' }, result.message)
+      //     );
       messagesDiv.appendChild(
-          this.createDom('div', { className: 'errorMessage' }, result.message)
-          );
-      messagesDiv.appendChild(
-          this.createDom('div', { className: 'description' }, "Please meditate on the following code:")
+          this.createDom('div', { className: 'description' }, "以下の箇所に誤りがあります！訂正しましょう！")
           );
 
       if (result.trace.stack) {
@@ -197,7 +197,7 @@ JsKoansReporter.prototype.reportSpecResults = function(spec) {
         var stack = lines[0];
         for (var i = 1; i < lines.length; i++) {
           if (lines[i].search('/koans/') != -1) {
-            stack += '\n' + lines[i]
+            stack = lines[i]
           }
         }
         messagesDiv.appendChild(this.createDom('div', {className: 'stackTrace'}, stack.trim()));
@@ -211,7 +211,7 @@ JsKoansReporter.prototype.reportSpecResults = function(spec) {
   }
 
   this.suiteDivs[spec.suite.id].appendChild(specDiv);
-  
+
 };
 
 JsKoansReporter.prototype.log = function() {
