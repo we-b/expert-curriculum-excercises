@@ -17,9 +17,8 @@ var utils = {
 }
 
 // tweet model
-var Tweet = function(author, body) {
+var Tweet = function(body) {
   this.uuid = utils.uuid()
-  this.author = author
   this.body = body
   this.isFavorited = false
 }
@@ -62,7 +61,7 @@ App.prototype.tweet = function(e) {
     var $tweetBody = $('#js-tweet-body')
     var body = $tweetBody.val()
     if(body.length !== 0){
-      var tweet = new Tweet('annonymous', body)
+      var tweet = new Tweet(body)
       this.tweets.unshift(tweet)
       $tweetBody.val('')
       this.render()
