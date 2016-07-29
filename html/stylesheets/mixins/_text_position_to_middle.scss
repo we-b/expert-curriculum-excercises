@@ -1,0 +1,4 @@
+@mixin text_position_to_middle($value) {
+  height: $value;
+  line-height: $value;
+}

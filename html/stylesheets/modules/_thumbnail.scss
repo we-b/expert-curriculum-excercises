@@ -1,0 +1,21 @@
+.thumbnail {
+  box-shadow: 0 0 2px #aaa;
+
+  .img {
+    width: 100%;
+  }
+
+  .text {
+    padding: 10px;
+
+    .title {
+      margin: 10px 0;
+      @include font_type($fsThumbTitle, #413531, bold);
+    }
+
+    p {
+      @include font_type($fsThumbBody, #685F5C);
+      word-wrap: break-word;
+    }
+  }
+}

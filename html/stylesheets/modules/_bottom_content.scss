@@ -1,0 +1,18 @@
+.bottom-content {
+  background: linear-gradient($primaryWhite, $whiteBlue);
+
+  &__wrapper {
+    height: $bottom-content_height;
+  }
+
+  &__title {
+    padding-top: 190px;
+    text-align: center;
+    @include font_type($fsBottomContent, #0E0E0E, bold)
+  }
+
+  &__button {
+    padding-top: 40px;
+    text-align: center;
+  }
+}

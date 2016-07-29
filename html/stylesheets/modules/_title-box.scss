@@ -1,0 +1,16 @@
+.title-box {
+
+  &__logo {
+    padding: 10px;
+    border: 2px solid #231916;
+    @include font_type($fsTitleBoxLogo, $primaryBlack, bold);
+    font-family: 'Raleway', sans-serif;
+  }
+
+  &__copy {
+    margin-top: 2.2vw;
+    @include font_type($fsTitleBoxCopy, $primaryBlack);
+    line-height: 1.8;
+    font-family: 'Raleway', sans-serif;
+  }
+}

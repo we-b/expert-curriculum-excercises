@@ -1,0 +1,7 @@
+@mixin fontsize($size: $fontSize) {
+  font-size: $size + px;
+  // font-size: ($size / $fontSize)  + rem;
+  @media screen and (max-width: 1200px) {
+    font-size: ($size / 12) + vw;
+  }
+}
