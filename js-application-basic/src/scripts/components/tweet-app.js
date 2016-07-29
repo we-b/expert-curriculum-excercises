@@ -11,6 +11,7 @@ var TweetApp = React.createClass({
           <MainHeader />
           <TweetForm />
           <TweetList />
+          <FilterTweet />
         </div>
       </div>
     );
