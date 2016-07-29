@@ -7,20 +7,23 @@
   <link rel="stylesheet" href="./src/styles/index.css">
 </head>
 <body>
-  <main>
-    <div class="container">
-      <header class="main-header">
-        <h1 class="logo">tweets</h1>
-      </header>
-      <div class="tweet-input">
-        <textarea class="tweet-input__textarea" name="tweet" id="js-tweet-body" cols="30" rows="10" placeholder="いま何してる？"></textarea>
+  <div id="tweet-container"></div>
+  <!-- <div id="tweet-container">
+    <div class="main">
+      <div class="container">
+        <header class="main-header">
+          <h1 class="logo">tweets</h1>
+        </header>
+        <div class="tweet-input">
+          <textarea class="tweet-input__textarea" name="tweet" id="js-tweet-body" cols="30" rows="10" placeholder="いま何してる？"></textarea>
+        </div>
+        <div id="js-tweets" class="tweets">
+        </div>
+        <nav id="js-filter" class="filter"></nav>
       </div>
-      <div id="js-tweets" class="tweets">
-      </div>
-      <nav id="js-filter" class="filter"></nav>
     </div>
-  </main>
-
+  </div> -->
+<!--
   <script id="js-filter-template" type="text/x-handlebars-template">
     <ul class="filter__items">
       <li class="filter__item {{#if isAll}}current{{/if}}"><a href="/#/all">すべてのツイート</a></li>
@@ -45,10 +48,12 @@
       <a class="js-destroy destroy lsf-icon" title="trash">削除</a>
     </section>
     {{/this}}
-  </script>
+  </script> -->
   <script src="./src/scripts/vendor/jquery-3.0.0.js"></script>
   <script src="./src/scripts/vendor/director.js"></script>
   <script src="./src/scripts/vendor/handlebars-latest.js"></script>
-  <script src="./src/scripts/index.js"></script>
+  <script src="http://fb.me/react-with-addons-0.12.2.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+  <script type="text/jsx" src="./src/scripts/components/tweet-app.js"></script>
 </body>
 </html>

@@ -43,7 +43,17 @@ body {
           background-color: hsla(31,15%,50%,.1)
 }
 
-main {
+/*main {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          justify-content: center;
+}*/
+
+.main {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -webkit-box-pack: center;
