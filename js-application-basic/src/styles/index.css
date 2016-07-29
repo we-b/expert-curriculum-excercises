@@ -53,6 +53,10 @@ body {
           justify-content: center;
 }*/
 
+ul li {
+  list-style: none;
+}
+
 .main {
   -webkit-box-align: center;
   -webkit-align-items: center;
