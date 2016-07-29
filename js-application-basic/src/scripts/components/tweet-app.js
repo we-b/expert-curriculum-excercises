@@ -4,6 +4,19 @@ var TweetApp = React.createClass({
         todos: [{body:"hello", isFavaried:false}]
       };
   },
+  render: function(){
+    return (
+      <div className="main">
+        <div className="container">
+          <MainHeader />
+          <TweetForm />
+          <TweetList />
+        </div>
+      </div>
+    );
+  }
+});
+
 var MainHeader = React.createClass({
   render: function(){
     return (
