@@ -111,13 +111,13 @@ var TweetList = React.createClass({
                 </p>
                 {(() =>
                   { if (tweet.isFavaried == false) {
-                      return <a className="js-favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入り</a>;
+                      return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入り</a>;
                     } else {
-                      return <a className="js-favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入りを解除</a>;
+                      return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入りを解除</a>;
                     }
                   }
                 )()}
-                <a className="js-favorite lsf-icon" title="trash" onClick={this._deleteTweet.bind(this, i)}>
+                <a className="lsf-icon" title="trash" onClick={this._deleteTweet.bind(this, i)}>
                   ツイートを削除
                 </a>
               </section>
