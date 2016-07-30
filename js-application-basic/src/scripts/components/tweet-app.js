@@ -1,4 +1,3 @@
-
 var MainHeader = React.createClass({
   render: function(){
     return (
@@ -44,6 +43,34 @@ var TweetForm = React.createClass({
 });
 
 var TweetList = React.createClass({
+  render: function(){
+    var rows = this.props.tweets.map(function(tweet, i){
+      return (<Tweet tweet={tweet} i={i} deleteTweet={this.props.deleteTweet} switchFav={this.props.switchFav}></Tweet>);
+    }, this);
+    return (
+      <div className="tweets">
+        {rows}
+      </div>
+    );
+  }
+});
+
+var FavoritedTweetList = React.createClass({
+  render: function(){
+    var rows = this.props.tweets.filter(function(tweet) {
+      return tweet.isFavaried;
+    }).map(function(tweet, i){
+      return (<Tweet tweet={tweet} i={i} deleteTweet={this.props.deleteTweet} switchFav={this.props.switchFav}></Tweet>);
+    }, this);
+    return (
+      <div className="tweets">
+        {rows}
+      </div>
+    )
+  }
+});
+
+var Tweet = React.createClass({
 
   _deleteTweet: function(i){
     this.props.deleteTweet(i);
@@ -53,46 +80,29 @@ var TweetList = React.createClass({
     this.props.switchFav(i);
   },
 
-  render: function(){
+  render: function() {
+    var tweet = this.props.tweet;
+    var i = this.props.i
     return (
-      <div className="tweets">
-        {
-          this.props.tweets.map(function(tweet, i){
-             return (
-              <section className="tweet" key={i}>
-                <div className="profile">
-                  <p className="user"><span className="user-icon lsf">user</span>名無しさん</p>
-                </div>
-                <p className="tweet__body">
-                  {tweet.body}
-                </p>
-                {(() =>
-                  { if (tweet.isFavaried == false) {
-                      return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入り</a>;
-                    } else {
-                      return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入りを解除</a>;
-                    }
-                  }
-                )()}
-                <a className="lsf-icon" title="trash" onClick={this._deleteTweet.bind(this, i)}>
-                  ツイートを削除
-                </a>
-              </section>
-            );
-          }, this)
-        }
-      </div>
-    );
-  }
-});
-
-var FilterTweet = React.createClass({
-  render: function(){
-    return (
-      <ul className="filter__items">
-        <li className="filter__item current">全てのツイート</li>
-        <li className="filter__item">お気に入り</li>
-      </ul>
+      <section className="tweet">
+        <div className="profile">
+          <p className="user"><span className="user-icon lsf">user</span>名無しさん</p>
+        </div>
+        <p className="tweet__body">
+          {tweet.body}
+        </p>
+        {(() =>
+          { if (tweet.isFavaried == false) {
+              return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入り</a>;
+            } else {
+              return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入りを解除</a>;
+            }
+          }
+        )()}
+        <a className="lsf-icon" title="trash" onClick={this._deleteTweet.bind(this, i)}>
+          ツイートを削除
+        </a>
+      </section>
     );
   }
 });
@@ -134,7 +144,10 @@ var TweetApp = React.createClass({
           <MainHeader />
           <TweetForm createTweet={this.createTweet}/>
           <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet} switchFav={this.switchFav}/>
-          <FilterTweet />
+          <ul className="filter__items">
+            <li className="filter__item current">全てのツイート</li>
+            <li className="filter__item">お気に入り</li>
+          </ul>
         </div>
       </div>
     );
