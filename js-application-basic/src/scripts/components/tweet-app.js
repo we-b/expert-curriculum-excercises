@@ -20,13 +20,21 @@ var TweetApp = React.createClass({
     });
   },
 
+  switchFav: function(i){
+    var targetTweet = this.state.tweets[i];
+    targetTweet.isFavaried ^= true;
+    this.setState({
+      tweets: this.state.tweets
+    });
+  },
+
   render: function(){
     return (
       <div className="main">
         <div className="container">
           <MainHeader />
           <TweetForm createTweet={this.createTweet}/>
-          <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet}/>
+          <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet} switchFav={this.switchFav}/>
           <FilterTweet />
         </div>
       </div>
@@ -84,6 +92,10 @@ var TweetList = React.createClass({
     this.props.deleteTweet(i);
   },
 
+  _switchFav: function(i){
+    this.props.switchFav(i);
+  },
+
   render: function(){
     return (
       <div className="tweets">
@@ -99,9 +111,9 @@ var TweetList = React.createClass({
                 </p>
                 {(() =>
                   { if (tweet.isFavaried == false) {
-                      return <a className="js-favorite lsf-icon" title="star" onClick={this._deleteTweet.bind(this, i)}>お気に入り</a>;
+                      return <a className="js-favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入り</a>;
                     } else {
-                      return <a className="js-favorite lsf-icon" title="star" onClick={this._deleteTweet.bind(this, i)}>お気に入りを解除</a>;
+                      return <a className="js-favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入りを解除</a>;
                     }
                   }
                 )()}
