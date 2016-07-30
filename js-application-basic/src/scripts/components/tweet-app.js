@@ -16,7 +16,7 @@ var TweetApp = React.createClass({
   deleteTweet: function(i){
     this.state.tweets.splice(i, 1);
     this.setState({
-      todos: this.state.todos
+      tweets: this.state.tweets
     });
   },
 
