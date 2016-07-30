@@ -1,46 +1,3 @@
-var TweetApp = React.createClass({
-
-  getInitialState: function() {
-      return {
-        tweets: []
-      };
-  },
-
-  createTweet: function(newTweet){
-    this.state.tweets.unshift({body:newTweet, isFavaried:false})
-    this.setState({
-      tweets: this.state.tweets
-    })
-  },
-
-  deleteTweet: function(i){
-    this.state.tweets.splice(i, 1);
-    this.setState({
-      tweets: this.state.tweets
-    });
-  },
-
-  switchFav: function(i){
-    var targetTweet = this.state.tweets[i];
-    targetTweet.isFavaried ^= true;
-    this.setState({
-      tweets: this.state.tweets
-    });
-  },
-
-  render: function(){
-    return (
-      <div className="main">
-        <div className="container">
-          <MainHeader />
-          <TweetForm createTweet={this.createTweet}/>
-          <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet} switchFav={this.switchFav}/>
-          <FilterTweet />
-        </div>
-      </div>
-    );
-  }
-});
 
 var MainHeader = React.createClass({
   render: function(){
@@ -136,6 +93,50 @@ var FilterTweet = React.createClass({
         <li className="filter__item current">全てのツイート</li>
         <li className="filter__item">お気に入り</li>
       </ul>
+    );
+  }
+});
+
+var TweetApp = React.createClass({
+
+  getInitialState: function() {
+      return {
+        tweets: []
+      };
+  },
+
+  createTweet: function(newTweet){
+    this.state.tweets.unshift({body:newTweet, isFavaried:false})
+    this.setState({
+      tweets: this.state.tweets
+    })
+  },
+
+  deleteTweet: function(i){
+    this.state.tweets.splice(i, 1);
+    this.setState({
+      tweets: this.state.tweets
+    });
+  },
+
+  switchFav: function(i){
+    var targetTweet = this.state.tweets[i];
+    targetTweet.isFavaried ^= true;
+    this.setState({
+      tweets: this.state.tweets
+    });
+  },
+
+  render: function(){
+    return (
+      <div className="main">
+        <div className="container">
+          <MainHeader />
+          <TweetForm createTweet={this.createTweet}/>
+          <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet} switchFav={this.switchFav}/>
+          <FilterTweet />
+        </div>
+      </div>
     );
   }
 });
