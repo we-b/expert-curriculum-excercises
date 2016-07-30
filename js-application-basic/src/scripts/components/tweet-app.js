@@ -1,7 +1,7 @@
 var TweetApp = React.createClass({
   getInitialState: function() {
       return {
-        todos: [{body:"hello", isFavaried:false}]
+        todos: [{body:"hello", isFavaried:true}]
       };
   },
   render: function(){
@@ -10,7 +10,7 @@ var TweetApp = React.createClass({
         <div className="container">
           <MainHeader />
           <TweetForm />
-          <TweetList />
+          <TweetList todos={this.state.todos} />
           <FilterTweet />
         </div>
       </div>
@@ -42,17 +42,23 @@ var TweetList = React.createClass({
   render: function(){
     return (
       <div className="tweets">
-        <section className="tweet">
-          <div className="profile">
-          <p className="user"><span className="user-icon lsf">user</span>名無しさん</p>
-          </div>
-          <p className="tweet__body">
-            hello word
-          </p>
-          <a className="js-favorite lsf-icon" title="star">
-            お気に入りに登録
-          </a>
-        </section>
+        {
+          this.props.todos.map(function(todo, i){
+            if (todo.isFavaried == true) {return (
+              <section className="tweet" data-uuid={i}>
+                <div className="profile">
+                  <p className="user"><span className="user-icon lsf">user</span>名無しさん</p>
+                </div>
+                <p className="tweet__body">
+                  {todo.body}
+                </p>
+                <a className="js-favorite lsf-icon" title="star">
+                  お気に入りに登録
+                </a>
+              </section>)
+            }
+          })
+        }
       </div>
     );
   }
