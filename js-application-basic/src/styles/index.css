@@ -193,6 +193,7 @@ ul li {
 .tweet a {
   font-size: 0.7rem;
   cursor: pointer;
+  padding-right: 1vw;
 }
 
 .favorite:before {
