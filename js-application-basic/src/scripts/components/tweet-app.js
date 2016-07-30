@@ -138,16 +138,33 @@ var TweetApp = React.createClass({
     });
   },
 
+  componentWillMount: function() {
+    var setAllPage = function() {
+        this.setState({ page: 'all'});
+      }.bind(this);
+    var setFavoritedPage = function() {
+        this.setState({ page: 'filter' });
+      }.bind(this);
+    var router = Router({
+        '/all': setAllPage,
+        '/filter': setFavoritedPage,
+        '*': setAllPage,
+    });
+    router.init();
+  },
+
   render: function(){
+    var page = this.state.page === 'all' ? <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet} switchFav={this.switchFav}/> : <FavoritedTweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet} switchFav={this.switchFav}/>
+
     return (
       <div className="main">
         <div className="container">
           <MainHeader />
           <TweetForm createTweet={this.createTweet}/>
-          <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet} switchFav={this.switchFav}/>
+            {page}
           <ul className="filter__items">
-            <li className="filter__item current">全てのツイート</li>
-            <li className="filter__item">お気に入り</li>
+            <li className={this.state.page == 'all' ? 'filter__item current' : 'filter__item'}><a href="#/all">全てのツイート</a></li>
+            <li className={this.state.page == 'filter' ? 'filter__item current' : 'filter__item'}><a href="#/filter">お気に入り</a></li>
           </ul>
         </div>
       </div>
