@@ -1,14 +1,23 @@
 var TweetApp = React.createClass({
+
   getInitialState: function() {
       return {
         tweets: []
       };
   },
+
   createTweet: function(newTweet){
     this.state.tweets.unshift({body:newTweet, isFavaried:true})
     this.setState({
       tweets: this.state.tweets
     })
+  },
+
+  deleteTweet: function(i){
+    this.state.tweets.splice(i, 1);
+    this.setState({
+      todos: this.state.todos
+    });
   },
 
   render: function(){
@@ -17,7 +26,7 @@ var TweetApp = React.createClass({
         <div className="container">
           <MainHeader />
           <TweetForm createTweet={this.createTweet}/>
-          <TweetList tweets={this.state.tweets} />
+          <TweetList tweets={this.state.tweets} deleteTweet={this.deleteTweet}/>
           <FilterTweet />
         </div>
       </div>
@@ -36,6 +45,7 @@ var MainHeader = React.createClass({
 });
 
 var TweetForm = React.createClass({
+
   getInitialState: function() {
       return {
           body: ""
@@ -69,12 +79,17 @@ var TweetForm = React.createClass({
 });
 
 var TweetList = React.createClass({
+
+  _deleteTweet: function(i){
+    this.props.deleteTweet(i);
+  },
+
   render: function(){
     return (
       <div className="tweets">
         {
           this.props.tweets.map(function(tweet, i){
-            if (tweet.isFavaried == true) {return (
+             return (
               <section className="tweet" key={i}>
                 <div className="profile">
                   <p className="user"><span className="user-icon lsf">user</span>名無しさん</p>
@@ -82,12 +97,20 @@ var TweetList = React.createClass({
                 <p className="tweet__body">
                   {tweet.body}
                 </p>
-                <a className="js-favorite lsf-icon" title="star">
-                  お気に入りに登録
+                {(() =>
+                  { if (tweet.isFavaried == false) {
+                      return <a className="js-favorite lsf-icon" title="star" onClick={this._deleteTweet.bind(this, i)}>お気に入り</a>;
+                    } else {
+                      return <a className="js-favorite lsf-icon" title="star" onClick={this._deleteTweet.bind(this, i)}>お気に入りを解除</a>;
+                    }
+                  }
+                )()}
+                <a className="js-favorite lsf-icon" title="trash" onClick={this._deleteTweet.bind(this, i)}>
+                  ツイートを削除
                 </a>
-              </section>)
-            }
-          })
+              </section>
+            );
+          }, this)
         }
       </div>
     );
