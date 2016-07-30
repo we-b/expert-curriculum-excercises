@@ -134,7 +134,7 @@ var FilterTweet = React.createClass({
     return (
       <ul className="filter__items">
         <li className="filter__item current">全てのツイート</li>
-        <li className="filter__item">全てのツイート</li>
+        <li className="filter__item">お気に入り</li>
       </ul>
     );
   }
