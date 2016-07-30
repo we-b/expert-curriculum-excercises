@@ -7,7 +7,7 @@ var TweetApp = React.createClass({
   },
 
   createTweet: function(newTweet){
-    this.state.tweets.unshift({body:newTweet, isFavaried:true})
+    this.state.tweets.unshift({body:newTweet, isFavaried:false})
     this.setState({
       tweets: this.state.tweets
     })
