@@ -62,7 +62,7 @@ var FavoritedTweetList = React.createClass({
     }).map(function(tweet, i){
       return (<Tweet tweet={tweet} i={i} deleteTweet={this.props.deleteTweet} switchFav={this.props.switchFav}></Tweet>);
     }, this);
-    return (
+      return (
       <div className="tweets">
         {rows}
       </div>
@@ -82,7 +82,7 @@ var Tweet = React.createClass({
 
   render: function() {
     var tweet = this.props.tweet;
-    var i = this.props.i
+    var i = this.props.i;
     return (
       <section className="tweet">
         <div className="profile">
