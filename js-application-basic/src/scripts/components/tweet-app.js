@@ -140,16 +140,27 @@ var TweetApp = React.createClass({
   },
 
   deleteTweet: function(uuid){
+    this.state.tweets.splice(this.tweetIndexByUuid(uuid), 1);
     this.setState({
       tweets: this.state.tweets
     });
   },
 
   switchFav: function(uuid){
+    var targetTweet = this.state.tweets[this.tweetIndexByUuid(uuid)];
     targetTweet.isFavaried ^= true;
     this.setState({
       tweets: this.state.tweets
     });
+  },
+
+  tweetIndexByUuid: function(uuid) {
+    var i = this.state.tweets.length
+    while (i--) {
+      if (this.state.tweets[i].uuid === uuid) {
+        return i;
+      }
+    }
   },
 
   componentWillMount: function() {
