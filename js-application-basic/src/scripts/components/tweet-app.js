@@ -45,7 +45,7 @@ var TweetForm = React.createClass({
 var TweetList = React.createClass({
   render: function(){
     var rows = this.props.tweets.map(function(tweet, i){
-      return (<Tweet tweet={tweet} i={i} deleteTweet={this.props.deleteTweet} switchFav={this.props.switchFav}></Tweet>);
+      return (<Tweet tweet={tweet} deleteTweet={this.props.deleteTweet} switchFav={this.props.switchFav}></Tweet>);
     }, this);
     return (
       <div className="tweets">
