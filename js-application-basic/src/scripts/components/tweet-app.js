@@ -127,7 +127,7 @@ var TweetApp = React.createClass({
   getInitialState: function() {
       return {
         tweets: [],
-        page: 'all'
+        page: 'all',
       };
   },
 
