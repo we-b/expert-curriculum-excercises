@@ -1,4 +1,4 @@
-var MainHeader = React.createClass({
+var Header = React.createClass({
   render: function(){
     return (
       <header className="main-header">
@@ -184,7 +184,7 @@ var TweetApp = React.createClass({
     return (
       <div className="main">
         <div className="container">
-          <MainHeader />
+          <Header />
           <TweetForm createTweet={this.createTweet}/>
             {page}
           <ul className="filter__items">
