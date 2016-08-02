@@ -59,8 +59,8 @@ var FavoritedTweetList = React.createClass({
   render: function(){
     var rows = this.props.tweets.filter(function(tweet) {
       return tweet.isFavaried;
-    }).map(function(tweet, i){
-      return (<Tweet tweet={tweet} i={i} deleteTweet={this.props.deleteTweet} switchFav={this.props.switchFav}></Tweet>);
+    }).map(function(tweet){
+      return (<Tweet tweet={tweet} deleteTweet={this.props.deleteTweet} switchFav={this.props.switchFav}></Tweet>);
     }, this);
       return (
       <div className="tweets">
@@ -72,17 +72,17 @@ var FavoritedTweetList = React.createClass({
 
 var Tweet = React.createClass({
 
-  _deleteTweet: function(i){
-    this.props.deleteTweet(i);
+  _deleteTweet: function(uuid){
+    this.props.deleteTweet(uuid);
   },
 
-  _switchFav: function(i){
-    this.props.switchFav(i);
+  _switchFav: function(uuid){
+    this.props.switchFav(uuid);
   },
 
   render: function() {
     var tweet = this.props.tweet;
-    var i = this.props.i;
+    var uuid = tweet.uuid;
     return (
       <section className="tweet">
         <div className="profile">
@@ -93,13 +93,13 @@ var Tweet = React.createClass({
         </p>
         {(() =>
           { if (tweet.isFavaried == false) {
-              return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入り</a>;
+              return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, uuid)}>お気に入り</a>;
             } else {
-              return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, i)}>お気に入りを解除</a>;
+              return <a className="js-favorite favorite lsf-icon" title="star" onClick={this._switchFav.bind(this, uuid)}>お気に入りを解除</a>;
             }
           }
         )()}
-        <a className="lsf-icon" title="trash" onClick={this._deleteTweet.bind(this, i)}>
+        <a className="lsf-icon" title="trash" onClick={this._deleteTweet.bind(this, uuid)}>
           ツイートを削除
         </a>
       </section>
@@ -131,22 +131,21 @@ var TweetApp = React.createClass({
       };
   },
 
+
   createTweet: function(newTweet){
-    this.state.tweets.unshift({body:newTweet, isFavaried:false})
+    this.state.tweets.unshift({body:newTweet, isFavaried:false, uuid:this.uuid()})
     this.setState({
       tweets: this.state.tweets
     })
   },
 
-  deleteTweet: function(i){
-    this.state.tweets.splice(i, 1);
+  deleteTweet: function(uuid){
     this.setState({
       tweets: this.state.tweets
     });
   },
 
-  switchFav: function(i){
-    var targetTweet = this.state.tweets[i];
+  switchFav: function(uuid){
     targetTweet.isFavaried ^= true;
     this.setState({
       tweets: this.state.tweets
