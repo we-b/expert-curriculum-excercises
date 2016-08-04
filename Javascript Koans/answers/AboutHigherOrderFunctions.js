@@ -47,7 +47,7 @@ describe('第6章 高階関数を理解しよう', function () {
     };
     //forEachは配列のすべての要素に対して引数で渡したメソッドを使用する。
     //今回の場合はnumbersの各要素一つ一つに対してメソッドisEvenを行う。
-    //各要素を順番に取り出し、itemの変数の中に格納して処理を行う。msg += (item % 2) === 0は、条件式(item % 2) === 0の結果(true or false)をmsgに代入させる。
+    //各要素を順番に取り出し、itemの変数の中に格納して処理を行う。msg = (item % 2) === 0は、条件式(item % 2) === 0の結果(true or false)をmsgに代入させる。
     _(numbers).forEach(isEven);
 
     expect(msg).toEqual('falsetruefalse');//falsetruefalse
