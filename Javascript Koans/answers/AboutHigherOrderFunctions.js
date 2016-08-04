@@ -43,7 +43,7 @@ describe('第6章 高階関数を理解しよう', function () {
     var numbers = [1,2,3];
     var msg = "";
     var isEven = function (item) {
-      msg += (item % 2) === 0;
+      msg = (item % 2) === 0;
     };
     //forEachは配列のすべての要素に対して引数で渡したメソッドを使用する。
     //今回の場合はnumbersの各要素一つ一つに対してメソッドisEvenを行う。
