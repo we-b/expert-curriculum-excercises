@@ -79,10 +79,10 @@ describe("第3章 関数を実践しながら理解しよう", function() {
       return argsArray.join(",");
     }
 
-    expect(returnAllArgs("first", "second", "third")).toBe("first", "second", "third");
+    expect(returnAllArgs("first", "second", "third")).toBe("first, second, third");
   });
 
-  it("「18: 「関数と変数」", function () {//should pass functions as values
+  it("「18: 「関数と変数」", function () {
 
     var appendRules = function (name) {
       return name + " rules!";
