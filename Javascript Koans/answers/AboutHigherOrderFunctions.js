@@ -1,5 +1,3 @@
-var _; //globals
-
 /* This section uses a functional extension known as Underscore.js - http://documentcloud.github.com/underscore/
      "Underscore is a utility-belt library for JavaScript that provides a lot of the functional programming support
       that you would expect in Prototype.js (or Ruby), but without extending any of the built-in JavaScript objects.
