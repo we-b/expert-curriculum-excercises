@@ -1,5 +1,3 @@
-var _;
-
 describe('第6章 高階関数を理解しよう', function () {
 
   it("31: 「filterメソッドで配列から条件に一致した要素を取り出す」", function () {
