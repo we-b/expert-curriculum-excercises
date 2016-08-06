@@ -63,7 +63,7 @@ describe("第3章 関数を実践しながら理解しよう", function() {
       return firstArg;
     }
 
-    expect(returnFirstArg("first", "second", "third")).toBe("first", "second", "third");
+    expect(returnFirstArg("first", "second", "third")).toBe("first,second,third");
 
     function returnSecondArg(firstArg, secondArg) {
       return secondArg;
