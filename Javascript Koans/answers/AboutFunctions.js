@@ -17,7 +17,7 @@ describe("第3章 関数を実践しながら理解しよう", function() {
     }
 
     function overrideMessage() {
-      var message = "こんにちは!";
+      var message = "こんにちは";
       return message;
     }
 
