@@ -53,7 +53,7 @@ describe("第4章 オブジェクトの仕組みを理解しよう ", function (
     };
 
     var watchStudents = students.callStudents(4);
-    expect("They are tanaka and satou satou satou satou").toMatch(callStudents);
+    expect("They are tanaka and the satou satou satou satou").toMatch(callStudents);
   });
 
   it("24: 「'this'の使い方」", function () {
