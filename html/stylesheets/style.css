@@ -1,0 +1,332 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'texgyreadventor-bold';
+  src: url("./fonts/texgyreadventor-bold.otf") format("opentype"); }
+@font-face {
+  font-family: 'texgyreadventor-Regular';
+  src: url("./fonts/texgyreadventor-regular.otf") format("opentype"); }
+@font-face {
+  font-family: 'FreestyleScriptStd';
+  src: url("./fonts/FreestyleScriptStd.otf") format("opentype"); }
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+.clearfix {
+  content: "";
+  clear: both;
+  display: block; }
+
+ul li {
+  list-style: none; }
+
+.top {
+  background-color: #EFF4F6;
+  padding-top: 110px;
+  height: 800px; }
+  .top__hero-image-area {
+    width: 1100px;
+    height: 604px;
+    margin: 0 auto 110px;
+    position: relative;
+    /*&__logo_border {
+      position: absolute;
+      left: 0;
+      width: 430px;
+      height: 160px;
+      top: 164px;
+      border: 2px solid #231916;
+      z-index: 999;
+    }*/ }
+    .top__hero-image-area__image {
+      position: absolute;
+      right: -24px;
+      top: 24px;
+      height: 580px;
+      width: 910px;
+      -webkit-box-shadow: -24px -24px 0px #FFEC00;
+      box-shadow: -24px -24px 0px #FFEC00; }
+    .top__hero-image-area__logo {
+      position: absolute;
+      left: 0;
+      width: 404px;
+      top: 164px;
+      border: 2px solid #231916;
+      z-index: 990;
+      padding: 12px; }
+    .top__hero-image-area .hero-image__caption-box {
+      z-index: 999;
+      position: absolute;
+      bottom: 0;
+      left: 215px;
+      right: -24px;
+      padding: 15px;
+      /*ここ指定ないね*/
+      background-color: rgba(0, 0, 0, 0.2); }
+      .top__hero-image-area .hero-image__caption-box__text {
+        color: #FFF;
+        line-height: 1.5; }
+  .top__nav {
+    position: relative;
+    width: 1100px;
+    height: 230px;
+    margin: -30px auto 0;
+    background-color: #FFF;
+    border-bottom: 2px solid #ccc;
+    z-index: 990;
+    font-family: texgyreadventor-bold; }
+    .top__nav h1 {
+      position: absolute;
+      top: -26px;
+      left: -26px;
+      font-size: 80px;
+      color: #FFEC00;
+      font-family: FreestyleScriptStd; }
+    .top__nav__title {
+      font-size: 30px;
+      padding-top: 85px;
+      margin-left: 40px;
+      line-height: 1.2; }
+    .top__nav__button-container {
+      position: absolute;
+      right: 40px;
+      bottom: 40px; }
+      .top__nav__button-container__button {
+        font-family: texgyreadventor-regular;
+        font-size: 24px;
+        line-height: 60px;
+        height: 60px;
+        width: 183px;
+        background-color: transparent;
+        color: #000;
+        border: 3px solid #000;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        float: right;
+        margin-left: 30px; }
+        .top__nav__button-container__button--new-order {
+          float: right;
+          font-family: texgyreadventor-bold;
+          font-size: 24px;
+          line-height: 60px;
+          height: 60px;
+          width: 183px;
+          background-color: #FFEC00;
+          color: #000;
+          border: 3px solid #FFEC00;
+          text-align: center;
+          text-decoration: none;
+          display: block; }
+      .top__nav__button-container__message {
+        font-size: 22px;
+        color: #D3D3D3;
+        position: absolute;
+        top: -37px;
+        left: 0; }
+
+.products-container {
+  width: 1424px;
+  margin: 0 auto; }
+  .products-container__heading {
+    font-size: 70px;
+    font-family: texgyreadventor-bold;
+    text-align: center;
+    margin-top: 195px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 999;
+    color: #FFEC00; }
+    .products-container__heading--title {
+      font-size: 70px;
+      font-family: texgyreadventor-bold;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 100%;
+      z-index: 998;
+      color: #000; }
+  .products-container__cell {
+    width: 340px;
+    float: left;
+    margin: 0 8px 16px; }
+    .products-container__cell__image {
+      height: 240px;
+      background-position: top center;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
+    .products-container__cell__caption {
+      padding: 20px 10px;
+      background-color: #EFF4F6; }
+      .products-container__cell__caption__title {
+        font-family: helvetica;
+        font-weight: bold;
+        margin-bottom: 5px; }
+      .products-container__cell__caption__text {
+        font-family: helvetica; }
+
+.products-area {
+  /*padding-top: 54px;*/ }
+  .products-area__button-more {
+    margin: 0 auto;
+    margin-top: 50px;
+    clear: both;
+    font-family: texgyreadventor-bold;
+    font-size: 24px;
+    line-height: 60px;
+    height: 60px;
+    width: 183px;
+    background-color: #FFEC00;
+    color: #000;
+    border: 3px solid #FFEC00;
+    text-align: center;
+    text-decoration: none;
+    display: block; }
+
+.hoge {
+  /*padding-top: 154px;*/
+  /*margin-top: 54px;*/
+  /*padding-top: 200px;*/ }
+
+.conversion-area {
+  padding-bottom: 160px; }
+  .conversion-area__conversion-button {
+    font-family: texgyreadventor-regular;
+    font-size: 18px;
+    line-height: 70px;
+    height: 70px;
+    width: 315px;
+    background-color: #0E0E0E;
+    color: #fff;
+    border: 3px solid #0E0E0E;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    box-shadow: -4px -4px 0px #FFEC00; }
+
+.conversion-message {
+  text-align: center;
+  font-family: texgyreadventor-bold;
+  font-size: 50px;
+  padding-top: 190px;
+  padding-bottom: 40px; }
+
+footer {
+  min-width: 1424px;
+  height: 110px;
+  background-color: #FFEC00; }
+  footer .container {
+    width: 1100px;
+    margin: 0 auto; }
+  footer .footer-nav {
+    font-size: 12px;
+    line-height: 110px; }
+    footer .footer-nav__left {
+      width: 70%;
+      float: left; }
+      footer .footer-nav__left li {
+        float: left;
+        margin-left: 15px; }
+        footer .footer-nav__left li:after {
+          content: "|";
+          padding-left: 15px;
+          font-family: texgyreadventor-Regular; }
+        footer .footer-nav__left li:last-child:after {
+          content: none; }
+    footer .footer-nav__right {
+      width: 30%;
+      float: right; }
+      footer .footer-nav__right li {
+        float: right; }
+
+.footer-item {
+  font-family: texgyreadventor-bold; }
+
+/*# sourceMappingURL=style.css.map */

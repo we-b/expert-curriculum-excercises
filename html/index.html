@@ -1,173 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <meta charset="UTF-8">
-   <title>Product Box</title>
-   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-   <link href='https://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>
-   <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
-   <link rel="stylesheet" href="./style.css">
+  <title>productBox</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body>
-  <header class='header'>
-    <div class="header__wrapper wrapper">
-      <div class="header-bg">
-        <div class="header-bg__box">
-          <img src="./images/top.png" alt="" class='header-bg__box__img'>
-          <img src="./images/icn_left.png" alt="" class='header-bg__box__arrow-left'>
-          <img src="./images/icn_right.png" alt="" class='header-bg__box__arrow-right'>
-          <p class='header-bg__box__copy'>
-            Respond - A powerful new customer service and brand monitoring tool from Buffer
-            <span class='header-bg__box__copy--sub'>https://buffer.com/respond</span>
-          </p>
-        </div>
+  <header class="top">
+    <div class="top__hero-image-area">
+      <div class="top__hero-image-area__image-shadow"></div>
+      <img src="./images/top.png" alt="" class="top__hero-image-area__image hero-image">
+      <div class="hero-image__caption-box">
+        <p class="hero-image__caption-box__text">Respond - A powerful customer service brand monitoring tool from Buffer <br>https://buffer.com/respond</p>
       </div>
-      <div class="header__wrapper__title-box title-box">
-        <h1 class='title-box__logo'>
-          PRODUCT<br/>
-          BOX
-        </h1>
-        <div class='title-box__copy'>
-          WEB SERVICE,<br>
-          iOS APPLICATION<br>
-          PRODUCT BOX
-        </div>
-      </div>
-      <div class='header__wrapper__nav header__bottom'>
-        <div class='welcome-copy'>
-          <span>Welcome to Product box!</span>
-        </div>
-        <div class='registration-btn'>
-          <a href="">REGIST YOUR PRODUCT</a> <img src="./images/icn_arrowright.png" alt="">
-        </div>
-        <div class='nav'>
-          <h4 class='nav__left-box'>
-            TRYING TO FIND<br>
-            A NEW PRODUCT<br>
-            OUT OF THE BOX!
-          </h4>
-          <div class='nav__right-box'>
-            <div class='nav__right-box__sub-text'>
-              FIND BY.
-            </div>
-            <div class='btns'>
-              <a href="" class='btn btn--yellow'>A NEW ORDER</a>
-              <a href="" class='btn btn--border'>POPULAR</a>
-              <a href="" class='btn btn--border'>CATEGORY</a>
-            </div>
-          </div>
-        </div>
+      <img src="./images/logo.png" alt="" class="top__hero-image-area__logo">
+      <div class="top__hero-image-area__logo_border"></div>
+    </div>
+    <div class="top__nav">
+      <h1>Welcome to Productbox!</h1>
+      <p class="top__nav__title">GET STARTED AND <br>FIND A NEW ORODUCT <br>OUT OF THE BOX!!</p>
+      <div class="top__nav__button-container">
+        <p class="top__nav__button-container__message">FIND A NEW ORODUCT</p>
+        <a href="" class="top__nav__button-container__button">CATEGORY</a>
+        <a href="" class="top__nav__button-container__button">POPULAR</a>
+        <a href="" class="top__nav__button-container__button--new-order">NEW ORDER</a>
       </div>
     </div>
   </header>
-  <!-- UPPER CONTENT
-  -->
-  <div class='upper-content'>
-    <div class="wrapper">
-      <h2 class='upper-content__title'>A NEW ORDER</h2>
-      <div class='upper-content__items row'>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product1.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product2.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product3.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product4.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product1.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product2.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product3.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
-        <article class='col-4 thumbnail'>
-          <img class='img' src="./images/img_product1.png" alt="">
-          <div class="text">
-            <h3 class='title'>Spark by Readdle</h3>
-            <p>Fast, smart and beautiful email client for iOS</p>
-          </div>
-        </article>
+  <div class="container products-container clearfix">
+    <div class="products-container__heading">NEW ORDERS
+      <div class="products-container__heading--title">NEW ORDERS</div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/flat-plat.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
       </div>
-      <div class='upper-content__button'>
-        <a href="" class='btn btn--gray'>MORE</a>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/tech-book.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/thanks.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/aws.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/boat-sharing.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/tech-drill.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/flat-plat.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/tech-book.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/thanks.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/aws.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/boat-sharing.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
+      </div>
+    </div>
+    <div class="products-container__cell">
+      <div class="products-container__cell__image" style="background-image:url('./images/tech-drill.png');"></div>
+      <div class="products-container__cell__caption">
+        <h3 class="products-container__cell__caption__title">FLAT PLAT</h3>
+        <p class="products-container__cell__caption__text">an iOS application to find a new friend to meet in the place you want travell.</p>
       </div>
     </div>
   </div>
-  <!-- BOTTOM CONTENT
-  ------------------------------------ -->
-  <div class='bottom-content'>
-    <div class="bottom-content__wrapper wrapper">
-      <h3 class='bottom-content__title'>
-        LET'S TO REGISTER YOUR PRODUCT!
-      </h3>
-      <div class='bottom-content__button'>
-        <a href="" class='btn btn--black'>
-          REGIST YOUR PRODUCT
-        </a>
-      </div>
-    </div>
+  <!-- ↑↑products container ends here. -->
+  <!-- <div class="hoge"> -->
+  <a href="" class="products-area__button-more">more</a>
+  <!-- </div> -->
+  <div class="conversion-area">
+    <p class = "conversion-message" >Let's register your product!</p>
+    <a href="" class="btn conversion-area__conversion-button">REGISTER YOUR PRODUCT</a>
   </div>
-  <!-- FOOTER
-  ------------------------------------ -->
-  <footer class='footer'>
-    <div class="footer__wrapper wrapper">
-      <ul class='footer__nav nav'>
-        <li class='nav__item'>
-          <a href='' class='nav__item_link'>PRODUCT LISTS</a>
-        </li>
-        <li class='nav__item'>
-          <a href='' class='nav__item_link'>A NEW ORDER</a>
-        </li>
-        <li class='nav__item'>
-          <a href='' class='nav__item_link'>POPULAR</a>
-        </li>
-        <li class='nav__item'>
-          <a href='' class='nav__item_link'>CATEGORY</a>
-        </li>
-        <li class='nav__item'>
-          <a href='' class='nav__item_link'>REGIST YOUR PRODUCT</a>
-        </li>
-      </ul>
-
-      <p class='footer__copy'>
-        COPYRIGHT &copy; 2016 PRODUCT BOX.
-      </p>
+  <footer>
+    <div class="container">
+      <div class="footer-nav">
+        <ul class="footer-nav__left">
+          <li class="footer-item">PRODUCT LIST</li>
+          <li class="footer-item">NEW ORDERS</li>
+          <li class="footer-item">POPULAR</li>
+          <li class="footer-item">CATEGORY</li>
+          <li class="footer-item">REGISTER YOUR PRODUCT</li>
+        </ul>
+        <ul class="footer-nav__right">
+          <li class="footer-item">COPYRIGHT &copy; PRODUCT BOX.</li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>
-</html>
