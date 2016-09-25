@@ -1,38 +1,240 @@
 @charset "utf-8";
-// ===================================================================
-// 各ファイルのインポート
-// ===================================================================
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixin.scss";
+@import "reset.scss";
 
-// 設定用ファイル
-@import './config/setting';
-// 変数ファイル
-@import './config/variables';
 
-// フォント読み込みファイル
-@import './config/fonts';
-@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
-@import url(https://fonts.googleapis.com/css?family=Krona+One);
-@import url(https://fonts.googleapis.com/css?family=Raleway:800);
+.clearfix {
+  content: "";
+  clear: both;
+  display: block;
+}
 
-// リセットCSS
-@import './reset';
+ul li {
+  list-style: none;
+}
 
-// ミックスインファイル
-@import './mixins/clearfix';
-@import './mixins/reset_modifier';
-@import './mixins/text_position_to_middle';
-@import './mixins/accent';
-@import './mixins/fontsize';
-@import './mixins/font_type';
-@import './mixins/buttons';
-@import './mixins/grid';
+.top {
+  background-color: $background-color;
+  padding-top: 110px;
+  height: 800px;
+  &__hero-image-area{
+    width: 1100px;
+    height: 604px;
+    margin: 0 auto 110px;
+    position: relative;
+    &__image {
+      position: absolute;
+      right: -24px;
+      top: 24px;
+      height: 580px;
+      width: 910px;
+    -webkit-box-shadow: -24px -24px 0px $main_yellow;
+            box-shadow: -24px -24px 0px $main_yellow;
+    }
+    &__logo {
+      position: absolute;
+      left: 0;
+      width: 404px;
+      top: 164px;
+      border: 2px solid #231916;
+      z-index: 990;
+      padding: 12px;
+    }
+    /*&__logo_border {
+      position: absolute;
+      left: 0;
+      width: 430px;
+      height: 160px;
+      top: 164px;
+      border: 2px solid #231916;
+      z-index: 999;
+    }*/
+    .hero-image__caption-box {
+      z-index: 999;
+      position: absolute;
+      bottom: 0;
+      left: 215px;
+      right: -24px;
+      padding: 15px;
+      /*ここ指定ないね*/
+      background-color: rgba(0,0,0,0.2);
 
-// デザインモジュール
-@import './modules/layout';
-@import './modules/buttons';
-@import './modules/thumbnail';
-@import './modules/header';
-@import './modules/title-box';
-@import './modules/upper-content';
-@import './modules/bottom_content';
-@import './modules/footer';
+      &__text {
+        color: #FFF;
+        line-height: 1.5;
+      }
+    }
+  }
+  &__nav {
+    position: relative;
+    width: 1100px;
+    height: 230px;
+    margin: -30px auto 0;
+    background-color: #FFF;
+    border-bottom: 2px solid #ccc;
+    z-index: 990;
+    font-family: texgyreadventor-bold;
+    h1 {
+      position: absolute;
+      top: -26px;
+      left: -26px;
+      font-size: 80px;
+      color: $main_yellow;
+      font-family: FreestyleScriptStd;
+    }
+    &__title {
+      font-size: 30px;
+      padding-top: 85px;
+      margin-left: 40px;
+      line-height: 1.2;
+    }
+    &__button-container {
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
+      &__button {
+        @include button(60px, 183px, 24px, #000, texgyreadventor-regular, transparent, #000);
+        float: right;
+        margin-left: 30px;
+        &--new-order {
+          float: right;
+          @include button(60px, 183px, 24px, #000, texgyreadventor-bold, $main_yellow, $main_yellow);
+        }
+      }
+      &__message {
+        font-size: 22px;
+        color: #D3D3D3;
+        position: absolute;
+        top: -37px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.products-container {
+  width: 1424px;
+  margin: 0 auto;
+  &__heading {
+    font-size: 70px;
+    font-family: texgyreadventor-bold;
+    text-align: center;
+    margin-top: 195px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 999;
+    color: $main-yellow;
+    &--title {
+      font-size: 70px;
+      font-family: texgyreadventor-bold;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 100%;
+      z-index: 998;
+      color: #000;
+    }
+  }
+  &__cell {
+    width: 340px;
+    float: left;
+    margin: 0 8px 16px;
+    &__image {
+      height: 240px;
+      background-position: top center;
+      -webkit-background-size: cover;
+           -o-background-size: cover;
+              background-size: cover;
+    }
+    &__caption {
+      padding: 20px 10px;
+      background-color: $background-color;
+      &__title {
+        font-family: helvetica;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      &__text {
+        font-family: helvetica;
+      }
+    }
+  }
+}
+
+.products-area {
+  /*padding-top: 54px;*/
+  &__button-more {
+    margin: 0 auto;
+    margin-top: 50px;
+    clear: both;
+    @include button(60px, 183px, 24px, #000, texgyreadventor-bold, $main_yellow, $main_yellow);
+  }
+}
+
+.hoge {
+  /*padding-top: 154px;*/
+  /*margin-top: 54px;*/
+  /*padding-top: 200px;*/
+}
+
+.conversion-area {
+  padding-bottom: 160px;
+  &__conversion-button {
+    @include button(70px, 315px, 18px, #fff, texgyreadventor-regular, #0E0E0E, #0E0E0E);
+    margin: 0 auto;
+    box-shadow: -4px -4px 0px $main_yellow;
+  }
+}
+
+.conversion-message {
+  text-align: center;
+  font-family: texgyreadventor-bold;
+  font-size: 50px;
+  padding-top: 190px;
+  padding-bottom: 40px;
+}
+
+footer {
+  min-width: 1424px;
+  height: 110px;
+  background-color: $main_yellow;
+  .container {
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .footer-nav {
+    font-size: 12px;
+    line-height: 110px;
+    &__left {
+      width: 70%;
+      float: left;
+      li {
+        float: left;
+        margin-left: 15px;
+        &:after {
+          content: "|";
+          padding-left: 15px;
+          font-family: texgyreadventor-Regular;
+        }
+        &:last-child {
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
+    &__right {
+      width: 30%;
+      float: right;
+      li {
+        float: right;
+      }
+    }
+  }
+}
+
+.footer-item {
+  font-family: texgyreadventor-bold;
+}
